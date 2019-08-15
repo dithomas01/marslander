@@ -20,6 +20,9 @@ public class WebConfig implements WebMvcConfigurer {
     registry
         .addResourceHandler("/css/**")
         .addResourceLocations("classpath:/css/");
+    registry
+        .addResourceHandler("/webjars/**")
+        .addResourceLocations("/webjars/");
   }
 
   @Bean
