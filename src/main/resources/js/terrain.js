@@ -1,3 +1,3 @@
-var plotTerrain = function(x, y) {
+var plotTerrain = function(x) {
     console.log(x);
 };
