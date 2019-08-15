@@ -1,0 +1,19 @@
+body {
+}
+
+#mars-plot {
+    background: #222;
+    width: 980px;
+    height: 420px;
+}
+
+g, #marsplot {
+    transform: scale(0.14);
+    width: 7000px;
+    height: 3000px;
+}
+
+line, #mars-plot {
+    stroke: rgb(255, 0, 0);
+    stroke-width: 5px;
+}
