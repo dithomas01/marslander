@@ -9,13 +9,14 @@
     <script src="/js/terrain.js"></script>
     <title>Marslander Algo</title>
 </head>
-<body>${message}
+<body>
 <svg id="mars-plot">
     <g transform="translate(490, 210)">
         <line x1="0" y1="0" x2="${terrainX[0]}" y2="${terrainY[0]}"/>
         <c:forEach varStatus="state" items="${terrainX}" var="item">
             <c:if test="${not state.first}">
-                <line x1="${terrainX[state.index - 1]}" y1="${terrainY[state.index - 1]}" x2="${terrainX[state.index]}" y2="${terrainY[state.index]}"/>
+                <line x1="${terrainX[state.index - 1]}" y1="${terrainY[state.index - 1]}"
+                      x2="${terrainX[state.index]}" y2="${terrainY[state.index]}"/>
             </c:if>
         </c:forEach>
     </g>

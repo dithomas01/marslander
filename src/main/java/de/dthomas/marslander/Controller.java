@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @org.springframework.stereotype.Controller
@@ -19,20 +18,18 @@ public class Controller {
 
   @RequestMapping(value = "/", method = RequestMethod.GET)
   public String home(Model model) {
-    List<Integer> terrainX = new ArrayList<>();
-    List<Integer> terrainY = new ArrayList<>();
+    List<Integer> terrainX;
+    List<Integer> terrainY;
     TestCaseLoader testCaseLoader = new TestCaseLoader(0);
+    TestCase testCase;
     try {
-      TestCase testCase = testCaseLoader.loadTestCase();
-      terrainX = testCase.getTerrain().getXasList();
-      terrainY = testCase.getTerrain().getYasList();
+      testCase = testCaseLoader.loadTestCase();
     } catch(IOException ex) {
-      for (int i = 0; i<x.length; i++) {
-        terrainX.add(x[i]);
-        terrainY.add(y[i]);
-      }
       System.err.println(ex);
+        return "error";
     }
+    terrainX = testCase.getTerrain().getXasList();
+    terrainY = testCase.getTerrain().getYasList();
     model.addAttribute("terrainX", terrainX);
     model.addAttribute("terrainY", terrainY);
     return "index";
