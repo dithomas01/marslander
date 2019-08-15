@@ -5,6 +5,7 @@ body {
     background: #222;
     width: 980px;
     height: 420px;
+    transform: scale(1, -1);
 }
 
 g, #marsplot {
@@ -15,5 +16,5 @@ g, #marsplot {
 
 line, #mars-plot {
     stroke: rgb(255, 0, 0);
-    stroke-width: 5px;
+    stroke-width: 6px;
 }
