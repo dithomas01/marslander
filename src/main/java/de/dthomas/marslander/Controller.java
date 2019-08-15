@@ -19,8 +19,8 @@ public class Controller {
 
   @RequestMapping(value = "/", method = RequestMethod.GET)
   public String home(Model model) {
-    List<Integer> terrainX = new ArrayList<Integer>();
-    List<Integer> terrainY = new ArrayList<Integer>();
+    List<Integer> terrainX = new ArrayList<>();
+    List<Integer> terrainY = new ArrayList<>();
     TestCaseLoader testCaseLoader = new TestCaseLoader(0);
     try {
       TestCase testCase = testCaseLoader.loadTestCase();

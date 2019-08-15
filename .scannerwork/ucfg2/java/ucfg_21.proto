@@ -1,0 +1,54 @@
+
+Yde.dthomas.marslander.TestCaseLoader#loadTestCase()Lde/dthomas/marslander/model/TestCase;g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java ("1*£
+1g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java (9‹
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java (
+%0java.io.File"java.io.FileÖ
+Ó
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java (:
+%1"(java.io.File#<init>(Ljava/lang/String;)V*
+
+%0java.io.File*" 
+./src/main/resources/test.json
+›
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java (;
+jsonjava.io.File"__id*
+
+%0java.io.File“
+
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java (_
+testsjava.util.List"__id*
+""Ç
+Ä
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java ($*
+%2$de.dthomas.marslander.model.TestCase"
+__arrayGet*
+
+testsjava.util.List*
+""Ö
+Ó
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java ($4&
+$de.dthomas.marslander.TestCaseLoader"
+
+testCase"__id*,
+*
+%2$de.dthomas.marslander.model.TestCaseÖ
+Ó
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java (*
+%3$de.dthomas.marslander.model.TestCase"__id*6*4&
+$de.dthomas.marslander.TestCaseLoader"
+
+testCase"—
+g
+]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/TestCaseLoader.java (,
+*
+%3$de.dthomas.marslander.model.TestCaseB(&
+$de.dthomas.marslander.TestCaseLoader

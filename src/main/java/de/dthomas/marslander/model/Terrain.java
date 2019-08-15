@@ -1,6 +1,5 @@
 package de.dthomas.marslander.model;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,12 +27,10 @@ public class Terrain {
   }
 
   public List<Integer> getXasList() {
-    List<Integer> xList = Arrays.stream(this.x).boxed().collect(Collectors.toList());
-    return xList;
+    return Arrays.stream(this.x).boxed().collect(Collectors.toList());
   }
 
   public List<Integer> getYasList() {
-    List<Integer> yList = Arrays.stream(this.y).boxed().collect(Collectors.toList());
-    return yList;
+    return Arrays.stream(this.y).boxed().collect(Collectors.toList());
   }
 }

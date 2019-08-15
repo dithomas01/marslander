@@ -21,7 +21,11 @@ public class TestCaseLoader {
   public TestCase loadTestCase() throws IOException {
     File json = new File("./src/main/resources/test.json");
     List<TestCase> tests = objectMapper.readValue(json, new TypeReference<List<TestCase>>(){});
-    this.testCase = tests.get(caseNumber);
+    testCase = tests.get(caseNumber);
+    return this.testCase;
+  }
+
+  public TestCase getTestCase() {
     return this.testCase;
   }
 }
