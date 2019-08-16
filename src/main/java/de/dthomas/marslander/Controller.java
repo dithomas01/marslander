@@ -1,5 +1,6 @@
 package de.dthomas.marslander;
 
+import de.dthomas.marslander.ga.Population;
 import de.dthomas.marslander.model.TestCase;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.ui.Model;
@@ -30,6 +31,7 @@ public class Controller {
     }
     terrainX = testCase.getTerrain().getXasList();
     terrainY = testCase.getTerrain().getYasList();
+
     model.addAttribute("terrainX", terrainX);
     model.addAttribute("terrainY", terrainY);
     return "index";

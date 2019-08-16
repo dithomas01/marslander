@@ -37,6 +37,10 @@ public class Chromosome {
     return this.chromo;
   }
 
+  public Gene getGene(int i) {
+    return this.chromo.get(i);
+  }
+
   public void setChromo(List<Gene> chromo) {
     this.chromo = chromo;
   }

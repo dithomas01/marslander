@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/base.css">
     <script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/js/terrain.js"></script>
+    <script src="/webjars/d3js/5.9.7/d3.min.js"></script>
+    <script src="/js/plotChromosome.js"></script>
     <title>Marslander Algo</title>
 </head>
 <body>
@@ -21,5 +22,6 @@
         </c:forEach>
     </g>
 </svg>
+<script></script>
 </body>
 </html>
