@@ -12,8 +12,11 @@ public class Chromosome {
     public Builder() { chromo = new ArrayList<>(); }
 
     public Builder randomize(int size) {
-      for (int i = 0; i < size; i++) {
-        this.chromo.add(new Gene.Builder().randomize().build());
+      this.chromo.add(new Gene.Builder().randomize().build());
+      for (int i = 1; i < size; i++) {
+        this.chromo.add(new Gene.Builder()
+            .randomize(chromo.get(i-1).getRotate(), chromo.get(i-1).getPower())
+            .build());
       }
       return this;
     }

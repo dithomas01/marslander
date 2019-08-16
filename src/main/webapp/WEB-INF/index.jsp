@@ -12,7 +12,7 @@
 </head>
 <body>
 <svg id="mars-plot">
-    <g transform="translate(490, 210)">
+    <g id="parentG" transform="translate(490, 210)">
         <line x1="0" y1="0" x2="${terrainX[0]}" y2="${terrainY[0]}"/>
         <c:forEach varStatus="state" items="${terrainX}" var="item">
             <c:if test="${not state.first}">
@@ -22,6 +22,8 @@
         </c:forEach>
     </g>
 </svg>
-<script></script>
+<script>
+    plotChromosome("${line}")
+</script>
 </body>
 </html>

@@ -33,4 +33,17 @@ public class Terrain {
   public List<Integer> getYasList() {
     return Arrays.stream(this.y).boxed().collect(Collectors.toList());
   }
+
+  public int getHeight(int xCoordi) {
+    int yCoordi = 0;
+    for (int i = 1; i < x.length; i++) {
+      if (xCoordi < x[i]) {
+        double h = x[i] - x[i-1];
+        double m = ((double) y[i] - (double) y[i-1]) / h;
+        yCoordi = (int) (y[i-1] + (xCoordi - x[i-1])*m);
+        break;
+      }
+    }
+    return yCoordi;
+  }
 }

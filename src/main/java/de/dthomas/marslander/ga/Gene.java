@@ -18,6 +18,19 @@ public class Gene {
       return this;
     }
 
+    public Builder randomize(int lastRotate, int lastPower) {
+      int tmp;
+      do {
+        tmp = (int) (Math.random()*31) - 15 + lastRotate;
+      } while(90 < Math.abs(tmp));
+      this.rotate = tmp;
+      do {
+        tmp = (int) (Math.random()*2) - 1 + lastPower;
+      } while (0 > tmp && tmp > 4);
+      this.power = tmp;
+      return this;
+    }
+
     public Gene build() {
       return new Gene(this);
     }

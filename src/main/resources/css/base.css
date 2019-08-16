@@ -15,3 +15,10 @@ line, #mars-plot {
     stroke: rgb(255, 0, 0);
     stroke-width: 6px;
 }
+
+.lineContainer {
+    transform: none;
+}
+polyline , .lineContainer {
+    fill: none;
+}

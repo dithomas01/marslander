@@ -1,7 +1,9 @@
 package de.dthomas.marslander;
 
+import de.dthomas.marslander.ga.Chromosome;
 import de.dthomas.marslander.ga.Population;
 import de.dthomas.marslander.model.TestCase;
+import de.dthomas.marslander.shuttle.Shuttle;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,9 +33,14 @@ public class Controller {
     }
     terrainX = testCase.getTerrain().getXasList();
     terrainY = testCase.getTerrain().getYasList();
+    Population population = new Population();
 
+    Chromosome chromosome = new Chromosome.Builder().randomize(60).build();
+    Shuttle shuttle = new Shuttle(chromosome, testCase.getTerrain(), 550, 2500, 2700, 0, 0);
+    shuttle.computePath();
     model.addAttribute("terrainX", terrainX);
     model.addAttribute("terrainY", terrainY);
+    model.addAttribute("line", shuttle.toPolyLine());
     return "index";
   }
 
