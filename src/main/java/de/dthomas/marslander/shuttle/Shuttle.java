@@ -51,10 +51,18 @@ public class Shuttle {
       int newY = lastY + vSpeed;
       x.add(newX);
       y.add(newY);
-      if (terrain.getHeight(newX) > newY || newX < 0 || newX >= 7000 || newY >= 3000) {
+      int terrainHeight = terrain.getHeight(newX);
+      if (terrainHeight > newY || newX < 0 || newX >= 7000 || newY >= 3000) {
         crashed = true;
         break;
       }
+      if (terrainHeight == newY) {
+        if (terrain.isFlat(newX) && gene.getRotate() == 0 && vSpeed <= 40 && hSpeed <= 20) {
+          crashed = false;
+          break;
+        }
+      }
+      crashed = true;
     }
 
   }

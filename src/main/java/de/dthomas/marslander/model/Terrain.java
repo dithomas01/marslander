@@ -46,4 +46,16 @@ public class Terrain {
     }
     return yCoordi;
   }
+
+  public boolean isFlat(int xCoordi) {
+    for (int i = 1; i < x.length; i++) {
+      if (xCoordi < x[i]) {
+        double h = x[i] - x[i-1];
+        double m = ((double) y[i] - (double) y[i-1]) / h;
+        if (m==0) return true;
+        break;
+      }
+    }
+    return false;
+  }
 }

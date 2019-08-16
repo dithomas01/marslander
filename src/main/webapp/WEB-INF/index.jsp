@@ -24,12 +24,13 @@
 </svg>
 
 <script>
+    var crashArray = [];
     var polyArray = [];
     <c:forEach varStatus="state" items="${lines}" var="item">
         polyArray.push("${lines[state.index]}");
+        crashArray.push(${isCrashed[state.index]});
     </c:forEach>
     plotChromosome();
-
 </script>
 </body>
 </html>

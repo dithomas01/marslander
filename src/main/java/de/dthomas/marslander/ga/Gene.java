@@ -13,7 +13,7 @@ public class Gene {
     }
 
     public Builder randomize() {
-      this.rotate = (int) (Math.random()*181 - 90);
+      this.rotate = 0;
       this.power = (int) (Math.random()*5);
       return this;
     }

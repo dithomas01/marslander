@@ -35,8 +35,9 @@ public class Controller {
     terrainX = testCase.getTerrain().getXasList();
     terrainY = testCase.getTerrain().getYasList();
     Population population = new Population();
-    population.init(50, 50);
+    population.init(40, 60);
     String[] lines = new String[population.getPopu().size()];
+    Boolean[] crashes = new Boolean[population.getPopu().size()];
     Shuttle shuttle;
     Chromosome chromosome;
     for (int i = 0; i < population.getPopu().size(); i++) {
@@ -45,10 +46,12 @@ public class Controller {
           testCase.getY(), testCase.gethSpeed(), testCase.getvSpeed());
       shuttle.computePath();
       lines[i] = shuttle.toPolyLine();
+      crashes[i] = shuttle.isCrashed();
     }
     model.addAttribute("terrainX", terrainX);
     model.addAttribute("terrainY", terrainY);
     model.addAttribute("lines", lines);
+    model.addAttribute("isCrashed", crashes);
     return "index";
   }
 
