@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @org.springframework.stereotype.Controller
@@ -34,13 +35,20 @@ public class Controller {
     terrainX = testCase.getTerrain().getXasList();
     terrainY = testCase.getTerrain().getYasList();
     Population population = new Population();
-
-    Chromosome chromosome = new Chromosome.Builder().randomize(60).build();
-    Shuttle shuttle = new Shuttle(chromosome, testCase.getTerrain(), 550, 2500, 2700, 0, 0);
-    shuttle.computePath();
+    population.init(50, 50);
+    String[] lines = new String[population.getPopu().size()];
+    Shuttle shuttle;
+    Chromosome chromosome;
+    for (int i = 0; i < population.getPopu().size(); i++) {
+      chromosome = population.getChromosome(i);
+      shuttle = new Shuttle(chromosome, testCase.getTerrain(), testCase.getFuel(), testCase.getX(),
+          testCase.getY(), testCase.gethSpeed(), testCase.getvSpeed());
+      shuttle.computePath();
+      lines[i] = shuttle.toPolyLine();
+    }
     model.addAttribute("terrainX", terrainX);
     model.addAttribute("terrainY", terrainY);
-    model.addAttribute("line", shuttle.toPolyLine());
+    model.addAttribute("lines", lines);
     return "index";
   }
 

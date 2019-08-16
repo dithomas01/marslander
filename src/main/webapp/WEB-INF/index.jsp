@@ -22,8 +22,14 @@
         </c:forEach>
     </g>
 </svg>
+
 <script>
-    plotChromosome("${line}")
+    var polyArray = [];
+    <c:forEach varStatus="state" items="${lines}" var="item">
+        polyArray.push("${lines[state.index]}");
+    </c:forEach>
+    plotChromosome();
+
 </script>
 </body>
 </html>

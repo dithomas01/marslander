@@ -15,16 +15,10 @@ public class Population {
     this.popu = new ArrayList<>();
   }
 
-  public Chromosome init(int size) {
-    if (popu.size() > 0) return popu.get(popu.size() - 1);
-    this.size = size;
-    popu.add(new Chromosome.Builder().randomize(size).build());
-    return popu.get(0);
-  }
-
-  public Chromosome randNext() {
-    //TODO:next angle +/-15°; next power +/-1
-    return new Chromosome();
+  public void init(int PopSize, int ChromSize) {
+    for (int i=0; i < PopSize; i++) {
+      popu.add(new Chromosome.Builder().randomize(ChromSize).build());
+    }
   }
 
   public List<Chromosome> getPopu() {
