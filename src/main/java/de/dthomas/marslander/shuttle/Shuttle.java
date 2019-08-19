@@ -31,15 +31,12 @@ public class Shuttle {
   }
 
   public void computePath() {
-    int lastX, lastY;
+    int lastX;
+    int lastY;
     for (int i = 1; i < chromosome.getChromo().size(); i++) {
       Gene gene = chromosome.getGene(i);
-      if (fuel < 0) {
-        crashed = true;
-        break;
-      }
       fuel -= gene.getPower();
-      if (fuel < 0) {
+      if (fuel < -gene.getPower()) {
         crashed = true;
         break;
       }
@@ -78,11 +75,11 @@ public class Shuttle {
   }
 
   public String toPolyLine() {
-    String line = "";
+    StringBuilder stringBuilder = new StringBuilder();
     for (int i=0; i<this.x.size(); i++) {
-      line += x.get(i) + "," + y.get(i);
-      if (i+1 < x.size()) line += " ";
+      stringBuilder.append(x.get(i) + "," + y.get(i));
+      if (i+1 < x.size()) stringBuilder.append(" ");
     }
-    return line;
+    return stringBuilder.toString();
   }
 }

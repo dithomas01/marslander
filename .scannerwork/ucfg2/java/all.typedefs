@@ -251,7 +251,47 @@ canWrite()java.io.File#canWrite()Z2
 isInvalid()java.io.File#isInvalid()Z4
 setExecutable(ZZ)java.io.File#setExecutable(ZZ)Z0
 createNewFile()java.io.File#createNewFile()Zd
-)writeObject(Ljava/io/ObjectOutputStream;)7java.io.File#writeObject(Ljava/io/ObjectOutputStream;)VÞ
+)writeObject(Ljava/io/ObjectOutputStream;)7java.io.File#writeObject(Ljava/io/ObjectOutputStream;)V€
+java.util.Randomjava.lang.Objectjava.io.Serializable>
+internalNextLong(JJ)&java.util.Random#internalNextLong(JJ)J$
+next(I)java.util.Random#next(I)I.
+nextDouble()java.util.Random#nextDouble()DJ
+doubles(DD);java.util.Random#doubles(DD)Ljava/util/stream/DoubleStream;,
+nextFloat()java.util.Random#nextFloat()F=
+ints()3java.util.Random#ints()Ljava/util/stream/IntStream;&
+<init>()java.util.Random#<init>()V0
+nextBytes([B)java.util.Random#nextBytes([B)Vd
+'readObject(Ljava/io/ObjectInputStream;)9java.util.Random#readObject(Ljava/io/ObjectInputStream;)VB
+longs(J)6java.util.Random#longs(J)Ljava/util/stream/LongStream;?
+ints(J)4java.util.Random#ints(J)Ljava/util/stream/IntStream;D
+	longs(JJ)7java.util.Random#longs(JJ)Ljava/util/stream/LongStream;<
+internalNextInt(II)%java.util.Random#internalNextInt(II)I*
+
+<clinit>()java.util.Random#<clinit>()VA
+ints(II)5java.util.Random#ints(II)Ljava/util/stream/IntStream;(
+	nextInt()java.util.Random#nextInt()I:
+initialScramble(J)$java.util.Random#initialScramble(J)J(
+	<init>(J)java.util.Random#<init>(J)VF
+
+longs(JJJ)8java.util.Random#longs(JJJ)Ljava/util/stream/LongStream;6
+seedUniquifier()"java.util.Random#seedUniquifier()J*
+
+nextInt(I)java.util.Random#nextInt(I)IF
+	doubles()9java.util.Random#doubles()Ljava/util/stream/DoubleStream;@
+longs()5java.util.Random#longs()Ljava/util/stream/LongStream;*
+
+setSeed(J)java.util.Random#setSeed(J)V2
+nextGaussian() java.util.Random#nextGaussian()D0
+nextBoolean()java.util.Random#nextBoolean()ZC
+	ints(JII)6java.util.Random#ints(JII)Ljava/util/stream/IntStream;L
+doubles(JDD)<java.util.Random#doubles(JDD)Ljava/util/stream/DoubleStream;B
+internalNextDouble(DD)(java.util.Random#internalNextDouble(DD)DH
+
+doubles(J):java.util.Random#doubles(J)Ljava/util/stream/DoubleStream;*
+
+nextLong()java.util.Random#nextLong()J.
+resetSeed(J)java.util.Random#resetSeed(J)Vh
+)writeObject(Ljava/io/ObjectOutputStream;);java.util.Random#writeObject(Ljava/io/ObjectOutputStream;)VÞ
 +de.dthomas.marslander.ga.Chromosome$Builderjava.lang.ObjectA
 <init>()5de.dthomas.marslander.ga.Chromosome$Builder#<init>()Vc
 build()Xde.dthomas.marslander.ga.Chromosome$Builder#build()Lde/dthomas/marslander/ga/Chromosome;u
