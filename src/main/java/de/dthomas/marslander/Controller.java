@@ -11,7 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.util.HtmlUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -61,15 +60,63 @@ public class Controller {
   }
 
   @RequestMapping("/bla")
-  public ModelAndView bla() {
-    ModelAndView modelAndView = new ModelAndView("darwintest");
-
-    return modelAndView;
+  public String bla(Model model) {
+    List<Integer> terrainX;
+    List<Integer> terrainY;
+    TestCaseLoader testCaseLoader = new TestCaseLoader(0);
+    TestCase testCase;
+    try {
+      testCase = testCaseLoader.loadTestCase();
+    } catch(IOException ex) {
+      System.err.println(ex);
+      return "error";
+    }
+    terrainX = testCase.getTerrain().getXasList();
+    terrainY = testCase.getTerrain().getYasList();
+    model.addAttribute("terrainX", terrainX);
+    model.addAttribute("terrainY", terrainY);
+    return "darwintest2";
   }
 
-  @MessageMapping("/hello")
+  @RequestMapping("/bla2")
+  public String bla2(Model model) {
+    List<Integer> terrainX;
+    List<Integer> terrainY;
+    TestCaseLoader testCaseLoader = new TestCaseLoader(0);
+    TestCase testCase;
+    try {
+      testCase = testCaseLoader.loadTestCase();
+    } catch(IOException ex) {
+      System.err.println(ex);
+      return "error";
+    }
+    terrainX = testCase.getTerrain().getXasList();
+    terrainY = testCase.getTerrain().getYasList();
+    Population population = new Population();
+    population.init(40, 60);
+    String[] lines = new String[population.getPopu().size()];
+    Boolean[] crashes = new Boolean[population.getPopu().size()];
+    Chromosome chromosome;
+    List<Shuttle> shuttles = new ArrayList<>();
+    for (int i = 0; i < population.getPopu().size(); i++) {
+      chromosome = population.getChromosome(i);
+      Shuttle shuttle = new Shuttle(chromosome, testCase.getTerrain(), testCase.getFuel(), testCase.getX(),
+          testCase.getY(), testCase.gethSpeed(), testCase.getvSpeed());
+      shuttle.computePath();
+      lines[i] = shuttle.toPolyLine();
+      crashes[i] = shuttle.isCrashed();
+      shuttles.add(shuttle);
+    }
+    model.addAttribute("terrainX", terrainX);
+    model.addAttribute("terrainY", terrainY);
+    model.addAttribute("lines", lines);
+    model.addAttribute("isCrashed", crashes);
+    return "darwintest2";
+  }
+
+  @MessageMapping("/newData")
   @SendTo("/topic/greetings")
-  public Population greeting(HelloMessage message) throws Exception {
+  public Population greeting() throws Exception {
     Thread.sleep(1000); // simulated delay
     Population population = new Population();
     population.init(40, 60);
