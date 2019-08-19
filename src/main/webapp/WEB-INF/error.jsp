@@ -10,5 +10,7 @@
 </head>
 <body>
 <h1>Something went wrong!</h1>
+<h3>${errorMsg}</h3>
+<p>${exception}</p>
 </body>
 </html>

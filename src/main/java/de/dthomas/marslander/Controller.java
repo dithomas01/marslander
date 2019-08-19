@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @org.springframework.stereotype.Controller
@@ -37,15 +38,16 @@ public class Controller {
     population.init(40, 60);
     String[] lines = new String[population.getPopu().size()];
     Boolean[] crashes = new Boolean[population.getPopu().size()];
-    Shuttle shuttle;
     Chromosome chromosome;
+    List<Shuttle> shuttles = new ArrayList<>();
     for (int i = 0; i < population.getPopu().size(); i++) {
       chromosome = population.getChromosome(i);
-      shuttle = new Shuttle(chromosome, testCase.getTerrain(), testCase.getFuel(), testCase.getX(),
+      Shuttle shuttle = new Shuttle(chromosome, testCase.getTerrain(), testCase.getFuel(), testCase.getX(),
           testCase.getY(), testCase.gethSpeed(), testCase.getvSpeed());
       shuttle.computePath();
       lines[i] = shuttle.toPolyLine();
       crashes[i] = shuttle.isCrashed();
+      shuttles.add(shuttle);
     }
     model.addAttribute("terrainX", terrainX);
     model.addAttribute("terrainY", terrainY);
@@ -53,5 +55,4 @@ public class Controller {
     model.addAttribute("isCrashed", crashes);
     return "index";
   }
-
 }
