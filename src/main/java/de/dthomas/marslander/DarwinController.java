@@ -13,9 +13,5 @@ public class DarwinController {
   private TestCase testCase;
   private Darwin darwin;
 
-  @MessageMapping("/hello")
-  @SendTo("topic/greetings")
-  public Population darwin(Model model) {
-    return new Population();
-  }
+
 }

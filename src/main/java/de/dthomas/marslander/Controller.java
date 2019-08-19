@@ -5,9 +5,13 @@ import de.dthomas.marslander.ga.Population;
 import de.dthomas.marslander.model.TestCase;
 import de.dthomas.marslander.shuttle.Shuttle;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.util.HtmlUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -54,5 +58,21 @@ public class Controller {
     model.addAttribute("lines", lines);
     model.addAttribute("isCrashed", crashes);
     return "index";
+  }
+
+  @RequestMapping("/bla")
+  public ModelAndView bla() {
+    ModelAndView modelAndView = new ModelAndView("darwintest");
+
+    return modelAndView;
+  }
+
+  @MessageMapping("/hello")
+  @SendTo("/topic/greetings")
+  public Population greeting(HelloMessage message) throws Exception {
+    Thread.sleep(1000); // simulated delay
+    Population population = new Population();
+    population.init(40, 60);
+    return population;
   }
 }
