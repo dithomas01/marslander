@@ -1,9 +1,10 @@
 
-)de.dthomas.marslander.model.Point#getX()Id
-Z/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/model/Point.java ("1*Ù
+/de.dthomas.marslander.ga.GeneTest#testPower(I)Zd
+Z/home/mmuster/IdeaProjects/marslander/src/test/java/de/dthomas/marslander/ga/GeneTest.java ("1*Ù
 1d
-Z/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/model/Point.java ("n
+Z/home/mmuster/IdeaProjects/marslander/src/test/java/de/dthomas/marslander/ga/GeneTest.java (&"n
 d
-Z/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/model/Point.java (
+Z/home/mmuster/IdeaProjects/marslander/src/test/java/de/dthomas/marslander/ga/GeneTest.java (&
+"":
 ""B%#
-!de.dthomas.marslander.model.Point
+!de.dthomas.marslander.ga.GeneTest

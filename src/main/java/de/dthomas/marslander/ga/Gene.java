@@ -39,11 +39,6 @@ public class Gene {
     }
   }
 
-  public Gene (int rotate, int power) {
-    this.rotate = rotate;
-    this.power = power;
-  }
-
   public Gene(Builder builder) {
     this.rotate = builder.rotate;
     this.power = builder.power;
@@ -53,15 +48,7 @@ public class Gene {
     return rotate;
   }
 
-  public void setRotate(int rotate) {
-    this.rotate = rotate;
-  }
-
   public int getPower() {
     return power;
-  }
-
-  public void setPower(int power) {
-    this.power = power;
   }
 }
