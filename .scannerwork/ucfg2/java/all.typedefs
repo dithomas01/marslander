@@ -18,8 +18,171 @@ hashCode()java.lang.Object#hashCode()I&
 <init>()java.lang.Object#<init>()V$
 wait(J)java.lang.Object#wait(J)V&
 wait(JI)java.lang.Object#wait(JI)V5
-clone()*java.lang.Object#clone()Ljava/lang/Object;(
-java.io.Serializablejava.lang.Object(
+clone()*java.lang.Object#clone()Ljava/lang/Object;÷
+java.lang.Iterablejava.lang.Objectd
+&forEach(Ljava/util/function/Consumer;):java.lang.Iterable#forEach(Ljava/util/function/Consumer;)VH
+spliterator()7java.lang.Iterable#spliterator()Ljava/util/Spliterator;å
+java.util.Collectionjava.lang.Objectjava.lang.IterableR
+parallelStream()>java.util.Collection#parallelStream()Ljava/util/stream/Stream;J
+spliterator()9java.util.Collection#spliterator()Ljava/util/Spliterator;j
+(removeIf(Ljava/util/function/Predicate;)>java.util.Collection#removeIf(Ljava/util/function/Predicate;)Z~
+)toArray(Ljava/util/function/IntFunction;)Qjava.util.Collection#toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;B
+stream()6java.util.Collection#stream()Ljava/util/stream/Stream;Æ
+java.util.Listjava.util.Collectionjava.lang.ObjectÕ
+îof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)≥java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;Q
+of([Ljava/lang/Object;)6java.util.List#of([Ljava/lang/Object;)Ljava/util/List;O
+of(Ljava/lang/Object;)5java.util.List#of(Ljava/lang/Object;)Ljava/util/List;Ñ
+pof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)èjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;ï
+∏of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)◊java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;+
+of()#java.util.List#of()Ljava/util/List;p
+.replaceAll(Ljava/util/function/UnaryOperator;)>java.util.List#replaceAll(Ljava/util/function/UnaryOperator;)Vó
+:of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Yjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;Ò
+¶of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)≈java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;ﬂ
+^of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)}java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;©
+Çof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)°java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;D
+spliterator()3java.util.List#spliterator()Ljava/util/Spliterator;s
+(of(Ljava/lang/Object;Ljava/lang/Object;)Gjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;L
+sort(Ljava/util/Comparator;),java.util.List#sort(Ljava/util/Comparator;)Vª
+Lof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)kjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;_
+copyOf(Ljava/util/Collection;)=java.util.List#copyOf(Ljava/util/Collection;)Ljava/util/List;*
+java.util.RandomAccessjava.lang.Object'
+java.lang.Cloneablejava.lang.Object(
+java.io.Serializablejava.lang.Object‚
+
+java.util.AbstractCollectionjava.util.Collectionjava.lang.Objecth
+#containsAll(Ljava/util/Collection;)Ajava.util.AbstractCollection#containsAll(Ljava/util/Collection;)Z^
+addAll(Ljava/util/Collection;)<java.util.AbstractCollection#addAll(Ljava/util/Collection;)Z4
+	isEmpty()'java.util.AbstractCollection#isEmpty()ZG
+
+toString()9java.util.AbstractCollection#toString()Ljava/lang/String;d
+!removeAll(Ljava/util/Collection;)?java.util.AbstractCollection#removeAll(Ljava/util/Collection;)ZV
+remove(Ljava/lang/Object;)8java.util.AbstractCollection#remove(Ljava/lang/Object;)ZF
+	toArray()9java.util.AbstractCollection#toArray()[Ljava/lang/Object;l
+toArray([Ljava/lang/Object;)Ljava.util.AbstractCollection#toArray([Ljava/lang/Object;)[Ljava/lang/Object;Z
+contains(Ljava/lang/Object;):java.util.AbstractCollection#contains(Ljava/lang/Object;)Z@
+hugeCapacity(I)-java.util.AbstractCollection#hugeCapacity(I)Id
+!retainAll(Ljava/util/Collection;)?java.util.AbstractCollection#retainAll(Ljava/util/Collection;)Z†
+6finishToArray([Ljava/lang/Object;Ljava/util/Iterator;)fjava.util.AbstractCollection#finishToArray([Ljava/lang/Object;Ljava/util/Iterator;)[Ljava/lang/Object;2
+<init>()&java.util.AbstractCollection#<init>()VP
+add(Ljava/lang/Object;)5java.util.AbstractCollection#add(Ljava/lang/Object;)Z0
+clear()%java.util.AbstractCollection#clear()V±
+java.util.AbstractListjava.util.Listjava.util.AbstractCollectionP
+equals(Ljava/lang/Object;)2java.util.AbstractList#equals(Ljava/lang/Object;)Z:
+removeRange(II)'java.util.AbstractList#removeRange(II)VZ
+addAll(ILjava/util/Collection;)7java.util.AbstractList#addAll(ILjava/util/Collection;)ZL
+add(ILjava/lang/Object;)0java.util.AbstractList#add(ILjava/lang/Object;)VA
+subList(II)2java.util.AbstractList#subList(II)Ljava/util/List;O
+listIterator()=java.util.AbstractList#listIterator()Ljava/util/ListIterator;Z
+lastIndexOf(Ljava/lang/Object;)7java.util.AbstractList#lastIndexOf(Ljava/lang/Object;)I?
+	remove(I)2java.util.AbstractList#remove(I)Ljava/lang/Object;R
+indexOf(Ljava/lang/Object;)3java.util.AbstractList#indexOf(Ljava/lang/Object;)I0
+
+hashCode()"java.util.AbstractList#hashCode()IC
+
+iterator()5java.util.AbstractList#iterator()Ljava/util/Iterator;,
+<init>() java.util.AbstractList#<init>()V]
+set(ILjava/lang/Object;)Ajava.util.AbstractList#set(ILjava/lang/Object;)Ljava/lang/Object;H
+subListRangeCheck(III).java.util.AbstractList#subListRangeCheck(III)VQ
+listIterator(I)>java.util.AbstractList#listIterator(I)Ljava/util/ListIterator;B
+rangeCheckForAdd(I)+java.util.AbstractList#rangeCheckForAdd(I)VO
+outOfBoundsMsg(I):java.util.AbstractList#outOfBoundsMsg(I)Ljava/lang/String;J
+add(Ljava/lang/Object;)/java.util.AbstractList#add(Ljava/lang/Object;)Z*
+clear()java.util.AbstractList#clear()Vº'
+java.util.ArrayListjava.util.RandomAccessjava.util.Listjava.lang.Cloneablejava.util.AbstractListjava.io.SerializableM
+equals(Ljava/lang/Object;)/java.util.ArrayList#equals(Ljava/lang/Object;)Z7
+removeRange(II)$java.util.ArrayList#removeRange(II)V[
+!removeAll(Ljava/util/Collection;)6java.util.ArrayList#removeAll(Ljava/util/Collection;)ZM
+remove(Ljava/lang/Object;)/java.util.ArrayList#remove(Ljava/lang/Object;)ZL
+listIterator():java.util.ArrayList#listIterator()Ljava/util/ListIterator;=
+	toArray()0java.util.ArrayList#toArray()[Ljava/lang/Object;+
+	<init>(I)java.util.ArrayList#<init>(I)V7
+hugeCapacity(I)$java.util.ArrayList#hugeCapacity(I)Ie
+&forEach(Ljava/util/function/Consumer;);java.util.ArrayList#forEach(Ljava/util/function/Consumer;)Ve
+&equalsArrayList(Ljava/util/ArrayList;);java.util.ArrayList#equalsArrayList(Ljava/util/ArrayList;)Z)
+<init>()java.util.ArrayList#<init>()V6
+get(I),java.util.ArrayList#get(I)Ljava/lang/Object;g
+'readObject(Ljava/io/ObjectInputStream;)<java.util.ArrayList#readObject(Ljava/io/ObjectInputStream;)VL
+outOfBoundsMsg(I)7java.util.ArrayList#outOfBoundsMsg(I)Ljava/lang/String;'
+clear()java.util.ArrayList#clear()VI
+add(ILjava/lang/Object;)-java.util.ArrayList#add(ILjava/lang/Object;)V+
+	isEmpty()java.util.ArrayList#isEmpty()Z>
+subList(II)/java.util.ArrayList#subList(II)Ljava/util/List;-
+
+<clinit>()java.util.ArrayList#<clinit>()VW
+lastIndexOf(Ljava/lang/Object;)4java.util.ArrayList#lastIndexOf(Ljava/lang/Object;)Io
++add(Ljava/lang/Object;[Ljava/lang/Object;I)@java.util.ArrayList#add(Ljava/lang/Object;[Ljava/lang/Object;I)VO
+indexOf(Ljava/lang/Object;)0java.util.ArrayList#indexOf(Ljava/lang/Object;)I1
+trimToSize()!java.util.ArrayList#trimToSize()V]
+"indexOfRange(Ljava/lang/Object;II)7java.util.ArrayList#indexOfRange(Ljava/lang/Object;II)IK
+checkForComodification(I).java.util.ArrayList#checkForComodification(I)VZ
+set(ILjava/lang/Object;)>java.util.ArrayList#set(ILjava/lang/Object;)Ljava/lang/Object;N
+outOfBoundsMsg(II)8java.util.ArrayList#outOfBoundsMsg(II)Ljava/lang/String;G
+add(Ljava/lang/Object;),java.util.ArrayList#add(Ljava/lang/Object;)Ze
+&batchRemove(Ljava/util/Collection;ZII);java.util.ArrayList#batchRemove(Ljava/util/Collection;ZII)Z8
+clone()-java.util.ArrayList#clone()Ljava/lang/Object;5
+newCapacity(I)#java.util.ArrayList#newCapacity(I)IU
+<init>(Ljava/util/Collection;)3java.util.ArrayList#<init>(Ljava/util/Collection;)VÉ
+5replaceAllRange(Ljava/util/function/UnaryOperator;II)Jjava.util.ArrayList#replaceAllRange(Ljava/util/function/UnaryOperator;II)Vg
+'shiftTailOverGap([Ljava/lang/Object;II)<java.util.ArrayList#shiftTailOverGap([Ljava/lang/Object;II)V;
+ensureCapacity(I)&java.util.ArrayList#ensureCapacity(I)VF
+elementData(I)4java.util.ArrayList#elementData(I)Ljava/lang/Object;/
+setBit([JI) java.util.ArrayList#setBit([JI)V9
+grow(I).java.util.ArrayList#grow(I)[Ljava/lang/Object;<
+	remove(I)/java.util.ArrayList#remove(I)Ljava/lang/Object;c
+toArray([Ljava/lang/Object;)Cjava.util.ArrayList#toArray([Ljava/lang/Object;)[Ljava/lang/Object;Q
+contains(Ljava/lang/Object;)1java.util.ArrayList#contains(Ljava/lang/Object;)Zm
+*removeIf(Ljava/util/function/Predicate;II)?java.util.ArrayList#removeIf(Ljava/util/function/Predicate;II)Z-
+
+hashCode()java.util.ArrayList#hashCode()Ie
+&lastIndexOfRange(Ljava/lang/Object;II);java.util.ArrayList#lastIndexOfRange(Ljava/lang/Object;II)Ii
+(removeIf(Ljava/util/function/Predicate;)=java.util.ArrayList#removeIf(Ljava/util/function/Predicate;)ZW
+equalsRange(Ljava/util/List;II)4java.util.ArrayList#equalsRange(Ljava/util/List;II)ZQ
+sort(Ljava/util/Comparator;)1java.util.ArrayList#sort(Ljava/util/Comparator;)VN
+listIterator(I);java.util.ArrayList#listIterator(I)Ljava/util/ListIterator;Y
+ fastRemove([Ljava/lang/Object;I)5java.util.ArrayList#fastRemove([Ljava/lang/Object;I)Vh
+elementAt([Ljava/lang/Object;I)Ejava.util.ArrayList#elementAt([Ljava/lang/Object;I)Ljava/lang/Object;?
+rangeCheckForAdd(I)(java.util.ArrayList#rangeCheckForAdd(I)V;
+checkInvariants()&java.util.ArrayList#checkInvariants()V;
+hashCodeRange(II)&java.util.ArrayList#hashCodeRange(II)IW
+addAll(ILjava/util/Collection;)4java.util.ArrayList#addAll(ILjava/util/Collection;)ZU
+addAll(Ljava/util/Collection;)3java.util.ArrayList#addAll(Ljava/util/Collection;)Z7
+grow()-java.util.ArrayList#grow()[Ljava/lang/Object;u
+.replaceAll(Ljava/util/function/UnaryOperator;)Cjava.util.ArrayList#replaceAll(Ljava/util/function/UnaryOperator;)V[
+!retainAll(Ljava/util/Collection;)6java.util.ArrayList#retainAll(Ljava/util/Collection;)Z*
+nBits(I)java.util.ArrayList#nBits(I)[J@
+
+iterator()2java.util.ArrayList#iterator()Ljava/util/Iterator;I
+spliterator()8java.util.ArrayList#spliterator()Ljava/util/Spliterator;1
+isClear([JI)!java.util.ArrayList#isClear([JI)Zk
+)writeObject(Ljava/io/ObjectOutputStream;)>java.util.ArrayList#writeObject(Ljava/io/ObjectOutputStream;)V%
+size()java.util.ArrayList#size()IÒ
+#de.dthomas.marslander.ga.Chromosomejava.lang.ObjectY
+<init>(Ljava/util/List;)=de.dthomas.marslander.ga.Chromosome#<init>(Ljava/util/List;)V_
+setChromo(Ljava/util/List;)@de.dthomas.marslander.ga.Chromosome#setChromo(Ljava/util/List;)V9
+<init>()-de.dthomas.marslander.ga.Chromosome#<init>()VN
+getChromo()?de.dthomas.marslander.ga.Chromosome#getChromo()Ljava/util/List;ì
+5<init>(Lde/dthomas/marslander/ga/Chromosome$Builder;)Zde.dthomas.marslander.ga.Chromosome#<init>(Lde/dthomas/marslander/ga/Chromosome$Builder;)V[
+
+getGene(I)Mde.dthomas.marslander.ga.Chromosome#getGene(I)Lde/dthomas/marslander/ga/Gene;⁄
+de.dthomas.marslander.ga.Genejava.lang.Object9
+getRotate()*de.dthomas.marslander.ga.Gene#getRotate()IÅ
+/<init>(Lde/dthomas/marslander/ga/Gene$Builder;)Nde.dthomas.marslander.ga.Gene#<init>(Lde/dthomas/marslander/ga/Gene$Builder;)V7
+
+<init>(II))de.dthomas.marslander.ga.Gene#<init>(II)V9
+setPower(I)*de.dthomas.marslander.ga.Gene#setPower(I)V;
+setRotate(I)+de.dthomas.marslander.ga.Gene#setRotate(I)V7
+
+getPower())de.dthomas.marslander.ga.Gene#getPower()I¸
+#de.dthomas.marslander.model.Terrainjava.lang.Object;
+	isFlat(I).de.dthomas.marslander.model.Terrain#isFlat(I)Z9
+setY([I)-de.dthomas.marslander.model.Terrain#setY([I)V9
+setX([I)-de.dthomas.marslander.model.Terrain#setX([I)V9
+<init>()-de.dthomas.marslander.model.Terrain#<init>()VP
+getYasList()@de.dthomas.marslander.model.Terrain#getYasList()Ljava/util/List;A
+getHeight(I)1de.dthomas.marslander.model.Terrain#getHeight(I)I6
+getX(),de.dthomas.marslander.model.Terrain#getX()[I6
+getY(),de.dthomas.marslander.model.Terrain#getY()[IP
+getXasList()@de.dthomas.marslander.model.Terrain#getXasList()Ljava/util/List;(
 java.lang.Comparablejava.lang.Object”
 java.io.Filejava.lang.Comparablejava.lang.Objectjava.io.SerializableF
 equals(Ljava/lang/Object;)(java.io.File#equals(Ljava/lang/Object;)Z&
@@ -88,33 +251,11 @@ canWrite()java.io.File#canWrite()Z2
 isInvalid()java.io.File#isInvalid()Z4
 setExecutable(ZZ)java.io.File#setExecutable(ZZ)Z0
 createNewFile()java.io.File#createNewFile()Zd
-)writeObject(Ljava/io/ObjectOutputStream;)7java.io.File#writeObject(Ljava/io/ObjectOutputStream;)V÷
-java.lang.Iterablejava.lang.Objectd
-&forEach(Ljava/util/function/Consumer;):java.lang.Iterable#forEach(Ljava/util/function/Consumer;)VH
-spliterator()7java.lang.Iterable#spliterator()Ljava/util/Spliterator;å
-java.util.Collectionjava.lang.Objectjava.lang.IterableR
-parallelStream()>java.util.Collection#parallelStream()Ljava/util/stream/Stream;J
-spliterator()9java.util.Collection#spliterator()Ljava/util/Spliterator;j
-(removeIf(Ljava/util/function/Predicate;)>java.util.Collection#removeIf(Ljava/util/function/Predicate;)Z~
-)toArray(Ljava/util/function/IntFunction;)Qjava.util.Collection#toArray(Ljava/util/function/IntFunction;)[Ljava/lang/Object;B
-stream()6java.util.Collection#stream()Ljava/util/stream/Stream;Æ
-java.util.Listjava.util.Collectionjava.lang.ObjectÕ
-îof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)≥java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;Q
-of([Ljava/lang/Object;)6java.util.List#of([Ljava/lang/Object;)Ljava/util/List;O
-of(Ljava/lang/Object;)5java.util.List#of(Ljava/lang/Object;)Ljava/util/List;Ñ
-pof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)èjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;ï
-∏of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)◊java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;+
-of()#java.util.List#of()Ljava/util/List;p
-.replaceAll(Ljava/util/function/UnaryOperator;)>java.util.List#replaceAll(Ljava/util/function/UnaryOperator;)Vó
-:of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Yjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;Ò
-¶of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)≈java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;ﬂ
-^of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)}java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;©
-Çof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)°java.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;D
-spliterator()3java.util.List#spliterator()Ljava/util/Spliterator;s
-(of(Ljava/lang/Object;Ljava/lang/Object;)Gjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;L
-sort(Ljava/util/Comparator;),java.util.List#sort(Ljava/util/Comparator;)Vª
-Lof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)kjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;_
-copyOf(Ljava/util/Collection;)=java.util.List#copyOf(Ljava/util/Collection;)Ljava/util/List;+
+)writeObject(Ljava/io/ObjectOutputStream;)7java.io.File#writeObject(Ljava/io/ObjectOutputStream;)Vﬁ
++de.dthomas.marslander.ga.Chromosome$Builderjava.lang.ObjectA
+<init>()5de.dthomas.marslander.ga.Chromosome$Builder#<init>()Vc
+build()Xde.dthomas.marslander.ga.Chromosome$Builder#build()Lde/dthomas/marslander/ga/Chromosome;u
+randomize(I)ede.dthomas.marslander.ga.Chromosome$Builder#randomize(I)Lde/dthomas/marslander/ga/Chromosome$Builder;+
 java.lang.AutoCloseablejava.lang.ObjectH
 java.util.stream.BaseStreamjava.lang.Objectjava.lang.AutoCloseableû
 java.util.stream.IntStreamjava.util.stream.BaseStreamjava.lang.ObjectM
@@ -141,4 +282,9 @@ Piterate(ILjava/util/function/IntPredicate;Ljava/util/function/IntUnaryOperator;
 :concat(Ljava/util/stream/Stream;Ljava/util/stream/Stream;)kjava.util.stream.Stream#concat(Ljava/util/stream/Stream;Ljava/util/stream/Stream;)Ljava/util/stream/Stream;O
 	builder()Bjava.util.stream.Stream#builder()Ljava/util/stream/Stream$Builder;á
 )takeWhile(Ljava/util/function/Predicate;)Zjava.util.stream.Stream#takeWhile(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;á
-)dropWhile(Ljava/util/function/Predicate;)Zjava.util.stream.Stream#dropWhile(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+)dropWhile(Ljava/util/function/Predicate;)Zjava.util.stream.Stream#dropWhile(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;•
+%de.dthomas.marslander.ga.Gene$Builderjava.lang.Object;
+<init>()/de.dthomas.marslander.ga.Gene$Builder#<init>()Vk
+randomize(II)Zde.dthomas.marslander.ga.Gene$Builder#randomize(II)Lde/dthomas/marslander/ga/Gene$Builder;W
+build()Lde.dthomas.marslander.ga.Gene$Builder#build()Lde/dthomas/marslander/ga/Gene;g
+randomize()Xde.dthomas.marslander.ga.Gene$Builder#randomize()Lde/dthomas/marslander/ga/Gene$Builder;

@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Population {
   private List<Chromosome> popu;
-  private int size;
 
   public Population(List<Chromosome> popu) {
     this.popu = popu;
@@ -15,9 +14,9 @@ public class Population {
     this.popu = new ArrayList<>();
   }
 
-  public void init(int PopSize, int ChromSize) {
-    for (int i=0; i < PopSize; i++) {
-      popu.add(new Chromosome.Builder().randomize(ChromSize).build());
+  public void init(int popSize, int chromSize) {
+    for (int i=0; i < popSize; i++) {
+      popu.add(new Chromosome.Builder().randomize(chromSize).build());
     }
   }
 

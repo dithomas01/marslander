@@ -38,7 +38,7 @@ public class Terrain {
     int yCoordi = 0;
     for (int i = 1; i < x.length; i++) {
       if (xCoordi < x[i]) {
-        double h = x[i] - x[i-1];
+        double h = (double) x[i] - x[i-1];
         double m = ((double) y[i] - (double) y[i-1]) / h;
         yCoordi = (int) (y[i-1] + (xCoordi - x[i-1])*m);
         break;
@@ -50,7 +50,7 @@ public class Terrain {
   public boolean isFlat(int xCoordi) {
     for (int i = 1; i < x.length; i++) {
       if (xCoordi < x[i]) {
-        double h = x[i] - x[i-1];
+        double h = (double) x[i] - x[i-1];
         double m = ((double) y[i] - (double) y[i-1]) / h;
         if (m==0) return true;
         break;

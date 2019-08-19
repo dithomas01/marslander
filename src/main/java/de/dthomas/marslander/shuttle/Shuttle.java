@@ -56,11 +56,9 @@ public class Shuttle {
         crashed = true;
         break;
       }
-      if (terrainHeight == newY) {
-        if (terrain.isFlat(newX) && gene.getRotate() == 0 && vSpeed <= 40 && hSpeed <= 20) {
-          crashed = false;
-          break;
-        }
+      if (terrainHeight == newY && terrain.isFlat(newX) && gene.getRotate() == 0 && vSpeed <= 40 && hSpeed <= 20) {
+        crashed = false;
+        break;
       }
       crashed = true;
     }

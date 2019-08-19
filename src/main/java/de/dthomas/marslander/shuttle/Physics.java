@@ -10,7 +10,7 @@ public final class Physics {
   }
 
   public static int calcAngle(int hs, int vs) {
-    double speed = Math.sqrt(hs*hs + vs*vs);
+    double speed = Math.sqrt(hs*hs + ((double) vs)*vs);
     double angle = Math.asin((double) hs / speed);
     return (int)Math.toDegrees(angle);
   }
