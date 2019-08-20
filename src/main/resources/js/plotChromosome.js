@@ -4,13 +4,14 @@ var plotTerrain = function(terrainX, terrainY) {
         g.insert("line").attr("x1", terrainX[i-1]).attr("y1", terrainY[i-1])
             .attr("x2", terrainX[i]).attr("y2", terrainY[i]);
     }
-    d3.select("#terrainId").attr("disabled", true);
-    d3.select("#loadTerrain").attr("disabled", true);
+    d3.select("#sel-terrainId").attr("disabled", true);
+    d3.select("#btn-loadTerrain").attr("disabled", true);
+    d3.select("#btn-startSim").attr("disabled", null);
 };
 
 var plotChromosome = function(polyArray, crashArray) {
     console.log("plotChromosome")
-    console.log(d3.selectAll("#line").remove());
+    d3.selectAll("#line").remove();
     var g = d3.select("#parentG").insert("g").classed("lineContainer", true);
     for (var i = 0; i < polyArray.length; i++) {
         var line = g.insert("polyline").attr("id", "line").attr("points", polyArray[i]);

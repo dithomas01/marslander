@@ -17,15 +17,15 @@
     <g id="parentG" transform="translate(490, 210)">
     </g>
 </svg>
-<div id="terrain-loader">
+<div id="sel-terrain-loader">
     <form class="form-inline">
         <select id="terrainId">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
         </select>
-        <button id="loadTerrain" class="btn" type="button">Load Terrain</button>
-        <button id="startSim" class="btn" type="button">Start Simulation</button>
+        <button id="btn-loadTerrain" class="btn" type="button">Load Terrain</button>
+        <button id="btn-startSim" class="btn" type="button" disabled>Start Simulation</button>
     </form>
 </div>
 </body>

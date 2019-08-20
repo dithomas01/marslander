@@ -3,7 +3,6 @@ package de.dthomas.marslander;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.RequestDispatcher;
@@ -19,28 +18,25 @@ public class ErrorController implements org.springframework.boot.web.servlet.err
     String errorMsg = "";
 
     switch (statusCode) {
-      case 400: {
+      case 400:
         errorMsg = "Http Error Code: 400. Bad Request";
         break;
-      }
-      case 401: {
+      case 401:
         errorMsg = "Http Error Code: 401. Unauthorized";
         break;
-      }
-      case 404: {
+      case 404:
         errorMsg = "Http Error Code: 404. Resource not found";
         break;
-      }
-      case 500: {
+      case 500:
         errorMsg = "Http Error Code: 500. Internal Server Error";
         break;
-      }
+      default:
+        errorMsg = "Unmapped error.";
     }
     errorPage.addObject("errorMsg", errorMsg);
     errorPage.addObject("exception", exception);
     return errorPage;
   }
-
 
   @Override
   public String getErrorPath() {

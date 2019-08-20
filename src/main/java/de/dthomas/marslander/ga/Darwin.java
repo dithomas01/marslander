@@ -37,8 +37,8 @@ public class Darwin {
     this.oldShuttles = builder.oldShuttles;
     this.newPopu = new Population();
     this.size = oldShuttles.size();
-    this.bestNumber = Math.round(size*3/10);
-    this.rndNumber = Math.round(size*1/5) + this.bestNumber;
+    this.bestNumber = Math.round((float) size*3/10);
+    this.rndNumber = Math.round((float) size*1/5) + this.bestNumber;
   }
 
   public Population getNewPopu() {

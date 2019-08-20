@@ -1,16 +1,16 @@
 
-@de.dthomas.marslander.model.TestCase#getName()Ljava/lang/String;g
-]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/model/TestCase.java ("1*³
-1g
-]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/model/TestCase.java (¾
-»
-g
-]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/model/TestCase.java (
-%0java.lang.String"__id*2*0&
-$de.dthomas.marslander.model.TestCase"
-name"ƒ
-g
-]/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/model/TestCase.java (
-
-%0java.lang.StringB(&
-$de.dthomas.marslander.model.TestCase
+<de.dthomas.marslander.shuttle.Shuttle#getX()Ljava/util/List;h
+^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaA A("1*°
+1h
+^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaB B(»
+¸
+h
+^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaB B(
+%0java.util.List"__id*0*.'
+%de.dthomas.marslander.shuttle.Shuttle"
+x"‚
+h
+^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaB B(
+
+%0java.util.ListB)'
+%de.dthomas.marslander.shuttle.Shuttle

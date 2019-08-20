@@ -114,14 +114,7 @@ pof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljav
 (of(Ljava/lang/Object;Ljava/lang/Object;)Gjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;L
 sort(Ljava/util/Comparator;),java.util.List#sort(Ljava/util/Comparator;)Vª
 Lof(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)kjava.util.List#of(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;_
-copyOf(Ljava/util/Collection;)=java.util.List#copyOf(Ljava/util/Collection;)Ljava/util/List;†
-#de.dthomas.marslander.ga.Populationjava.lang.ObjectY
-<init>(Ljava/util/List;)=de.dthomas.marslander.ga.Population#<init>(Ljava/util/List;)V9
-<init>()-de.dthomas.marslander.ga.Population#<init>()V[
-setPopu(Ljava/util/List;)>de.dthomas.marslander.ga.Population#setPopu(Ljava/util/List;)Vm
-getChromosome(I)Yde.dthomas.marslander.ga.Population#getChromosome(I)Lde/dthomas/marslander/ga/Chromosome;9
-init(II)-de.dthomas.marslander.ga.Population#init(II)VJ
-	getPopu()=de.dthomas.marslander.ga.Population#getPopu()Ljava/util/List;*
+copyOf(Ljava/util/Collection;)=java.util.List#copyOf(Ljava/util/Collection;)Ljava/util/List;*
 java.util.RandomAccessjava.lang.Object'
 java.lang.Cloneablejava.lang.Object‚
 
@@ -430,7 +423,144 @@ insert(IJ);java.lang.StringBuilder#insert(IJ)Ljava/lang/StringBuilder;{
 insert(ID);java.lang.StringBuilder#insert(ID)Ljava/lang/StringBuilder;o
 )writeObject(Ljava/io/ObjectOutputStream;)Bjava.lang.StringBuilder#writeObject(Ljava/io/ObjectOutputStream;)VI
 
-insert(IF);java.lang.StringBuilder#insert(IF)Ljava/lang/StringBuilder;•
+insert(IF);java.lang.StringBuilder#insert(IF)Ljava/lang/StringBuilder;Œ
+$de.dthomas.marslander.TestCaseLoaderjava.lang.Objectk
+loadTestCase()Yde.dthomas.marslander.TestCaseLoader#loadTestCase()Lde/dthomas/marslander/model/TestCase;<
+	<init>(I)/de.dthomas.marslander.TestCaseLoader#<init>(I)Vi
+getTestCase()Xde.dthomas.marslander.TestCaseLoader#getTestCase()Lde/dthomas/marslander/model/TestCase;>
+java.io.Closeablejava.lang.Objectjava.lang.AutoCloseable%
+java.io.Flushablejava.lang.ObjectÉ
+java.io.OutputStreamjava.io.Closeablejava.lang.Objectjava.io.FlushableS
+nullOutputStream()=java.io.OutputStream#nullOutputStream()Ljava/io/OutputStream;,
+	write([B)java.io.OutputStream#write([B)V*
+<init>()java.io.OutputStream#<init>()V(
+flush()java.io.OutputStream#flush()V(
+close()java.io.OutputStream#close()V0
+write([BII)!java.io.OutputStream#write([BII)Vé
+java.io.FilterOutputStreamjava.io.OutputStream2
+	write([B)%java.io.FilterOutputStream#write([B)V\
+<init>(Ljava/io/OutputStream;):java.io.FilterOutputStream#<init>(Ljava/io/OutputStream;)V.
+flush()#java.io.FilterOutputStream#flush()V0
+write(I)$java.io.FilterOutputStream#write(I)V.
+close()#java.io.FilterOutputStream#close()V6
+write([BII)'java.io.FilterOutputStream#write([BII)VÖ 
+java.io.PrintStreamjava.lang.Appendablejava.io.Closeablejava.io.FilterOutputStream)
+print(J)java.io.PrintStream#print(J)V+
+	write([C)java.io.PrintStream#write([C)V-
+
+println(J)java.io.PrintStream#println(J)V)
+print(F)java.io.PrintStream#print(F)V-
+
+println(F)java.io.PrintStream#println(F)V/
+write([BII) java.io.PrintStream#write([BII)VÅ
+4<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)Ijava.io.PrintStream#<init>(Ljava/lang/String;Ljava/nio/charset/Charset;)V)
+print(Z)java.io.PrintStream#print(Z)V1
+clearError()!java.io.PrintStream#clearError()V-
+
+println(Z)java.io.PrintStream#println(Z)Vi
+(<init>(Ljava/io/File;Ljava/lang/String;)=java.io.PrintStream#<init>(Ljava/io/File;Ljava/lang/String;)V)
+write(I)java.io.PrintStream#write(I)VO
+println(Ljava/lang/Object;)0java.io.PrintStream#println(Ljava/lang/Object;)VK
+print(Ljava/lang/String;).java.io.PrintStream#print(Ljava/lang/String;)Ví
+4requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Zjava.io.PrintStream#requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;)
+print(I)java.io.PrintStream#print(I)V-
+
+println(I)java.io.PrintStream#println(I)V'
+flush()java.io.PrintStream#flush()V´
+?format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;m
+ append(Ljava/lang/CharSequence;)Ijava.io.PrintStream#append(Ljava/lang/CharSequence;)Ljava/io/PrintStream;l
+toCharset(Ljava/lang/String;)Kjava.io.PrintStream#toCharset(Ljava/lang/String;)Ljava/nio/charset/Charset;W
+<init>(ZLjava/io/OutputStream;)4java.io.PrintStream#<init>(ZLjava/io/OutputStream;)Vq
+"append(Ljava/lang/CharSequence;II)Kjava.io.PrintStream#append(Ljava/lang/CharSequence;II)Ljava/io/PrintStream;+
+	print([C)java.io.PrintStream#print([C)V)
+print(D)java.io.PrintStream#print(D)Vq
+,<init>(Ljava/lang/String;Ljava/lang/String;)Ajava.io.PrintStream#<init>(Ljava/lang/String;Ljava/lang/String;)V-
+
+println(D)java.io.PrintStream#println(D)VO
+println(Ljava/lang/String;)0java.io.PrintStream#println(Ljava/lang/String;)VE
+<init>(Ljava/io/File;)+java.io.PrintStream#<init>(Ljava/io/File;)VW
+<init>(Ljava/io/OutputStream;Z)4java.io.PrintStream#<init>(Ljava/io/OutputStream;Z)Vy
+0<init>(Ljava/io/File;Ljava/nio/charset/Charset;)Ejava.io.PrintStream#<init>(Ljava/io/File;Ljava/nio/charset/Charset;)V1
+ensureOpen()!java.io.PrintStream#ensureOpen()Vã
+9<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)Njava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/nio/charset/Charset;)V´
+?printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)hjava.io.PrintStream#printf(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;-
+
+setError()java.io.PrintStream#setError()Vá
+-printf(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#printf(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;?
+	append(C)2java.io.PrintStream#append(C)Ljava/io/PrintStream;M
+<init>(Ljava/lang/String;)/java.io.PrintStream#<init>(Ljava/lang/String;)Vá
+-format(Ljava/lang/String;[Ljava/lang/Object;)Vjava.io.PrintStream#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;+
+	newLine()java.io.PrintStream#newLine()V)
+print(C)java.io.PrintStream#print(C)V1
+checkError()!java.io.PrintStream#checkError()Z+
+	println()java.io.PrintStream#println()V'
+close()java.io.PrintStream#close()V-
+
+println(C)java.io.PrintStream#println(C)VK
+write(Ljava/lang/String;).java.io.PrintStream#write(Ljava/lang/String;)VK
+print(Ljava/lang/Object;).java.io.PrintStream#print(Ljava/lang/Object;)V{
+1<init>(Ljava/io/OutputStream;ZLjava/lang/String;)Fjava.io.PrintStream#<init>(Ljava/io/OutputStream;ZLjava/lang/String;)VU
+<init>(Ljava/io/OutputStream;)3java.io.PrintStream#<init>(Ljava/io/OutputStream;)V/
+println([C) java.io.PrintStream#println([C)Vã
+9<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Njava.io.PrintStream#<init>(ZLjava/nio/charset/Charset;Ljava/io/OutputStream;)Ví
+$de.dthomas.marslander.model.TestCasejava.lang.Object8
+setY(I)-de.dthomas.marslander.model.TestCase#setY(I)V`
+setName(Ljava/lang/String;)Ade.dthomas.marslander.model.TestCase#setName(Ljava/lang/String;)V@
+getRotate()1de.dthomas.marslander.model.TestCase#getRotate()I8
+setX(I)-de.dthomas.marslander.model.TestCase#setX(I)V@
+getvSpeed()1de.dthomas.marslander.model.TestCase#getvSpeed()I<
+	getFuel()/de.dthomas.marslander.model.TestCase#getFuel()IB
+sethSpeed(I)2de.dthomas.marslander.model.TestCase#sethSpeed(I)V@
+gethSpeed()1de.dthomas.marslander.model.TestCase#gethSpeed()I6
+getX(),de.dthomas.marslander.model.TestCase#getX()IB
+setRotate(I)2de.dthomas.marslander.model.TestCase#setRotate(I)V6
+getY(),de.dthomas.marslander.model.TestCase#getY()Iå
+1setTerrain(Lde/dthomas/marslander/model/Terrain;)Wde.dthomas.marslander.model.TestCase#setTerrain(Lde/dthomas/marslander/model/Terrain;)V>
+
+setFuel(I)0de.dthomas.marslander.model.TestCase#setFuel(I)VM
+	getName()@de.dthomas.marslander.model.TestCase#getName()Ljava/lang/String;:
+<init>().de.dthomas.marslander.model.TestCase#<init>()VB
+setvSpeed(I)2de.dthomas.marslander.model.TestCase#setvSpeed(I)V@
+setPower(I)1de.dthomas.marslander.model.TestCase#setPower(I)V>
+
+getPower()0de.dthomas.marslander.model.TestCase#getPower()If
+getTerrain()Vde.dthomas.marslander.model.TestCase#getTerrain()Lde/dthomas/marslander/model/Terrain;Í
+'de.dthomas.marslander.model.TerrainDatajava.lang.Object}
+(<init>(Ljava/util/List;Ljava/util/List;)Qde.dthomas.marslander.model.TerrainData#<init>(Ljava/util/List;Ljava/util/List;)VV
+getTerrainY()Ede.dthomas.marslander.model.TerrainData#getTerrainY()Ljava/util/List;V
+getTerrainX()Ede.dthomas.marslander.model.TerrainData#getTerrainX()Ljava/util/List;†
+#de.dthomas.marslander.ga.Populationjava.lang.ObjectY
+<init>(Ljava/util/List;)=de.dthomas.marslander.ga.Population#<init>(Ljava/util/List;)V9
+<init>()-de.dthomas.marslander.ga.Population#<init>()V[
+setPopu(Ljava/util/List;)>de.dthomas.marslander.ga.Population#setPopu(Ljava/util/List;)Vm
+getChromosome(I)Yde.dthomas.marslander.ga.Population#getChromosome(I)Lde/dthomas/marslander/ga/Chromosome;9
+init(II)-de.dthomas.marslander.ga.Population#init(II)VJ
+	getPopu()=de.dthomas.marslander.ga.Population#getPopu()Ljava/util/List;Ì
+&de.dthomas.marslander.DarwinControllerjava.lang.Object<
+<init>()0de.dthomas.marslander.DarwinController#<init>()Ví
+plotTerrain(Ljava/lang/String;)ode.dthomas.marslander.DarwinController#plotTerrain(Ljava/lang/String;)Lde/dthomas/marslander/model/TerrainData;ô
+/sendData(Lde/dthomas/marslander/ga/Population;)fde.dthomas.marslander.DarwinController#sendData(Lde/dthomas/marslander/ga/Population;)Ljava/util/List;B
+darwinize()3de.dthomas.marslander.DarwinController#darwinize()V˜
+'de.dthomas.marslander.ga.Darwin$Builderjava.lang.Object]
+<init>(Ljava/util/List;)Ade.dthomas.marslander.ga.Darwin$Builder#<init>(Ljava/util/List;)V[
+build()Pde.dthomas.marslander.ga.Darwin$Builder#build()Lde/dthomas/marslander/ga/Darwin;Ö
+de.dthomas.marslander.ga.Darwinjava.lang.Objectc
+populateNew()Rde.dthomas.marslander.ga.Darwin#populateNew()Lde/dthomas/marslander/ga/Population;a
+getNewPopu()Qde.dthomas.marslander.ga.Darwin#getNewPopu()Lde/dthomas/marslander/ga/Population;á
+1<init>(Lde/dthomas/marslander/ga/Darwin$Builder;)Rde.dthomas.marslander.ga.Darwin#<init>(Lde/dthomas/marslander/ga/Darwin$Builder;)VÙ
+%de.dthomas.marslander.shuttle.Shuttlejava.lang.Objectm
+getChromosome()Zde.dthomas.marslander.shuttle.Shuttle#getChromosome()Lde/dthomas/marslander/ga/Chromosome;A
+isCrashed()2de.dthomas.marslander.shuttle.Shuttle#isCrashed()ZE
+computePath()4de.dthomas.marslander.shuttle.Shuttle#computePath()VŸ
+W<init>(Lde/dthomas/marslander/ga/Chromosome;Lde/dthomas/marslander/model/Terrain;IIIII)~de.dthomas.marslander.shuttle.Shuttle#<init>(Lde/dthomas/marslander/ga/Chromosome;Lde/dthomas/marslander/model/Terrain;IIIII)VT
+toPolyLine()Dde.dthomas.marslander.shuttle.Shuttle#toPolyLine()Ljava/lang/String;F
+getX()<de.dthomas.marslander.shuttle.Shuttle#getX()Ljava/util/List;F
+getY()<de.dthomas.marslander.shuttle.Shuttle#getY()Ljava/util/List;Ï
+$de.dthomas.marslander.model.ViewDatajava.lang.ObjectP
+
+getLines()Bde.dthomas.marslander.model.ViewData#getLines()[Ljava/lang/String;U
+getCrashes()Ede.dthomas.marslander.model.ViewData#getCrashes()[Ljava/lang/Boolean;à
+/<init>([Ljava/lang/String;[Ljava/lang/Boolean;)Ude.dthomas.marslander.model.ViewData#<init>([Ljava/lang/String;[Ljava/lang/Boolean;)V•
 %de.dthomas.marslander.ga.Gene$Builderjava.lang.Object;
 <init>()/de.dthomas.marslander.ga.Gene$Builder#<init>()Vk
 randomize(II)Zde.dthomas.marslander.ga.Gene$Builder#randomize(II)Lde/dthomas/marslander/ga/Gene$Builder;W
@@ -442,11 +572,7 @@ insert(IF);java.lang.StringBuilder#insert(IF)Ljava/lang/StringBuilder;•
 <init>()+de.dthomas.marslander.ga.GeneTest#<init>()VC
 testRotate(II)1de.dthomas.marslander.ga.GeneTest#testRotate(II)Z?
 testPower(I)/de.dthomas.marslander.ga.GeneTest#testPower(I)ZA
-testRotate(I)0de.dthomas.marslander.ga.GeneTest#testRotate(I)ZÖ
-de.dthomas.marslander.ga.Darwinjava.lang.Objectc
-populateNew()Rde.dthomas.marslander.ga.Darwin#populateNew()Lde/dthomas/marslander/ga/Population;a
-getNewPopu()Qde.dthomas.marslander.ga.Darwin#getNewPopu()Lde/dthomas/marslander/ga/Population;á
-1<init>(Lde/dthomas/marslander/ga/Darwin$Builder;)Rde.dthomas.marslander.ga.Darwin#<init>(Lde/dthomas/marslander/ga/Darwin$Builder;)VÄ
+testRotate(I)0de.dthomas.marslander.ga.GeneTest#testRotate(I)ZÄ
 java.util.Randomjava.lang.Objectjava.io.Serializable>
 internalNextLong(JJ)&java.util.Random#internalNextLong(JJ)J$
 next(I)java.util.Random#next(I)I.

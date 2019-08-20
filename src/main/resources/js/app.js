@@ -51,6 +51,6 @@ $(function () {
         e.preventDefault();
     });
     $( "#disconnect" ).click(function() { disconnect(); });
-    $( "#loadTerrain" ).click(function() { sendTerrain(); });
-    $( "#startSim" ).click(function() { sendSimStart(); });
+    $( "#btn-loadTerrain" ).click(function() { sendTerrain(); });
+    $( "#btn-startSim" ).click(function() { sendSimStart(); });
 });

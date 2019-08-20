@@ -74,26 +74,4 @@ public class DarwinController {
     simpMessagingTemplate.convertAndSend("/plot/sim", new ViewData(lines, crashes));
     return shuttles;
   }
-
-  /*@MessageMapping("/simStart")
-  @SendTo("/plot/sim")
-  public ViewData greeting(){
-    Population population = new Population();
-    population.init(40, 60);
-    String[] lines = new String[population.getPopu().size()];
-    Boolean[] crashes = new Boolean[population.getPopu().size()];
-    Chromosome chromosome;
-    List<Shuttle> shuttles = new ArrayList<>();
-    for (int i = 0; i < population.getPopu().size(); i++) {
-      chromosome = population.getChromosome(i);
-      Shuttle shuttle = new Shuttle(chromosome, testCase.getTerrain(), testCase.getFuel(), testCase.getX(),
-          testCase.getY(), testCase.gethSpeed(), testCase.getvSpeed());
-      shuttle.computePath();
-      lines[i] = shuttle.toPolyLine();
-      crashes[i] = shuttle.isCrashed();
-      shuttles.add(shuttle);
-    }
-    return new ViewData(lines, crashes);
-  }*/
-
 }
