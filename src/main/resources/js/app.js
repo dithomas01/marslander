@@ -18,8 +18,9 @@ function connect() {
     stompClient.connect({}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/greetings', function (population) {
-            console.log(JSON.parse(population.body).popu);
+        stompClient.subscribe('/topic/greetings', function (viewData) {
+            var data = JSON.parse(viewData.body);
+            plotChromosome(data.lines, data.crashes);
         });
     });
 }
@@ -37,7 +38,11 @@ function sendName() {
 }
 
 function showGreeting(message) {
-    $("#greetings").append("<tr><td>" + message + "</td></tr>");
+    $("#terrain-loader").append("<tr><td>" + message + "</td></tr>");
+}
+
+function sendTerrain() {
+    stompClient.send("/app/newData", {}, $("#terrainId").val());
 }
 
 $(function () {
@@ -47,4 +52,5 @@ $(function () {
     $( "#connect" ).click(function() { connect(); });
     $( "#disconnect" ).click(function() { disconnect(); });
     $( "#send" ).click(function() { sendName(); });
+    $( "#loadTerrain" ).click(function() { sendTerrain(); })
 });

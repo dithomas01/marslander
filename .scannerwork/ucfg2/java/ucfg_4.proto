@@ -1,16 +1,41 @@
 
-<de.dthomas.marslander.shuttle.Shuttle#getY()Ljava/util/List;h
-^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaE E("1*°
-1h
-^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaF F(»
-¸
-h
-^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaF F(
-%0java.util.List"__id*0*.'
-%de.dthomas.marslander.shuttle.Shuttle"
-y"‚
-h
-^/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/shuttle/Shuttle.javaF F(
-
-%0java.util.ListB)'
-%de.dthomas.marslander.shuttle.Shuttle
+Pde.dthomas.marslander.Controller#greeting()Lde/dthomas/marslander/ga/Population;c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.javaw w("1*ÿ	
+1c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.javax x(
+­
+ª
+c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.javax x(
+
+%0void"java.lang.Thread#sleep(J)V*"
+java.lang.Thread*2è¸µ
+c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.javay  y(*)
+%1#de.dthomas.marslander.ga.Population"#de.dthomas.marslander.ga.PopulationÊ
+Ç
+c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.javay y(,
+%2"-de.dthomas.marslander.ga.Population#<init>()V*+
+)
+%1#de.dthomas.marslander.ga.PopulationÎ
+Ë
+c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.javay y(-1
+
+population#de.dthomas.marslander.ga.Population"__id*+
+)
+%1#de.dthomas.marslander.ga.Populationîë
+c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.javaz z(
+
+%3void"-de.dthomas.marslander.ga.Population#init(II)V*3
+1
+
+population#de.dthomas.marslander.ga.Population*2(*2<2init(II)"š
+c
+Y/home/mmuster/IdeaProjects/marslander/src/main/java/de/dthomas/marslander/Controller.java{ {(3
+1
+
+population#de.dthomas.marslander.ga.PopulationB$"
+ de.dthomas.marslander.Controller

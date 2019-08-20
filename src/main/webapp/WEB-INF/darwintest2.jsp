@@ -36,7 +36,12 @@
 </svg>
 <div id="terrain-loader">
     <form class=form-inline">
-        <button id="loadTerrain" class="btn" type="button" onclick="loadTerrain()">Load Terrain</button>
+        <select id="terrainId">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <button id="loadTerrain" class="btn" type="button">Load Terrain</button>
     </form>
 </div>
 </body>

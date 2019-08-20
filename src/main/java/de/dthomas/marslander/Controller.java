@@ -59,25 +59,6 @@ public class Controller {
     return "index";
   }
 
-  @RequestMapping("/bla")
-  public String bla(Model model) {
-    List<Integer> terrainX;
-    List<Integer> terrainY;
-    TestCaseLoader testCaseLoader = new TestCaseLoader(0);
-    TestCase testCase;
-    try {
-      testCase = testCaseLoader.loadTestCase();
-    } catch(IOException ex) {
-      System.err.println(ex);
-      return "error";
-    }
-    terrainX = testCase.getTerrain().getXasList();
-    terrainY = testCase.getTerrain().getYasList();
-    model.addAttribute("terrainX", terrainX);
-    model.addAttribute("terrainY", terrainY);
-    return "darwintest2";
-  }
-
   @RequestMapping("/bla2")
   public String bla2(Model model) {
     List<Integer> terrainX;
@@ -112,14 +93,5 @@ public class Controller {
     model.addAttribute("lines", lines);
     model.addAttribute("isCrashed", crashes);
     return "darwintest2";
-  }
-
-  @MessageMapping("/newData")
-  @SendTo("/topic/greetings")
-  public Population greeting() throws Exception {
-    Thread.sleep(1000); // simulated delay
-    Population population = new Population();
-    population.init(40, 60);
-    return population;
   }
 }
