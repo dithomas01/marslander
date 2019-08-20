@@ -23,6 +23,23 @@ public class Darwin {
     for (int i=bestNumber; i<rndNumber; i++) {
       list.add(oldShuttles.remove(random.nextInt(oldShuttles.size())).getChromosome());
     }
+    int rest = size - list.size();
+    int rndChromo;
+    double rndGene;
+    Chromosome chromosome01;
+    Chromosome chromosome02;
+    for (int i = 0; i < rest; i++) {
+      rndChromo = random.nextInt(rndNumber);
+      chromosome01 = oldShuttles.get(rndChromo).getChromosome();
+      int tmp = random.nextInt(rndNumber);
+      while (tmp==rndChromo) {
+        tmp = random.nextInt(rndNumber);
+      }
+      chromosome02 = oldShuttles.get(tmp).getChromosome();
+      rndGene = random.nextInt(11) / 10.0;
+      list.add(new Chromosome.Builder().weight(chromosome01, chromosome02,
+          list.get(i).getChromo().size(), rndGene).build());
+    }
     newPopu.setPopu(list);
     return newPopu;
   }

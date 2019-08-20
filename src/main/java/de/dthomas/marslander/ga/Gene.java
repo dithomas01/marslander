@@ -15,6 +15,12 @@ public class Gene {
       random = new Random();
     }
 
+    public Builder setRotatePower(int rotate, int power) {
+      this.rotate = rotate;
+      this.power = power;
+      return this;
+    }
+
     public Builder randomize() {
       this.rotate = 0;
       this.power = random.nextInt(4);

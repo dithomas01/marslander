@@ -52,7 +52,6 @@ public class Terrain {
       if (xCoordi < x[i]) {
         double h = (double) x[i] - x[i-1];
         double m = ((double) y[i] - (double) y[i-1]) / h;
-        System.out.println("m = " + m);
         if (m==0) return true;
         break;
       }
