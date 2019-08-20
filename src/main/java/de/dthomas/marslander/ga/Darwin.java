@@ -3,6 +3,7 @@ package de.dthomas.marslander.ga;
 import de.dthomas.marslander.shuttle.Shuttle;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -14,10 +15,11 @@ public class Darwin {
   private int rndNumber;
 
   public Population populateNew() {
-    sortOldShuttles();
+    //sortOldShuttles();
+    Collections.sort(oldShuttles, Collections.reverseOrder());
     List <Chromosome> list = new ArrayList<>();
     for (int i = 0; i < bestNumber; i++) {
-      list.add(oldShuttles.remove(i).getChromosome());
+      list.add(oldShuttles.remove(0).getChromosome());
     }
     Random random = new Random();
     for (int i=bestNumber; i<rndNumber; i++) {

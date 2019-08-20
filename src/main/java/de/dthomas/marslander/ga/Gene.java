@@ -30,7 +30,7 @@ public class Gene {
     public Builder randomize(int lastRotate, int lastPower) {
       int tmp;
       do {
-        tmp = random.nextInt(30) - 15 + lastRotate;
+        tmp = random.nextInt(31) - 15 + lastRotate;
       } while(90 < Math.abs(tmp));
       this.rotate = tmp;
       do {

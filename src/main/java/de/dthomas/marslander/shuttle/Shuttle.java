@@ -7,7 +7,7 @@ import de.dthomas.marslander.model.Terrain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Shuttle {
+public class Shuttle implements Comparable<Shuttle> {
   private Chromosome chromosome;
   private Terrain terrain;
   private List<Integer> x;
@@ -57,6 +57,7 @@ public class Shuttle {
         break;
       }
       if (terrainHeight == newY && terrain.isFlat(newX) && gene.getRotate() == 0 && vSpeed <= 40 && hSpeed <= 20) {
+        System.out.println("Success!!!");
         crashed = false;
         break;
       }
@@ -125,11 +126,20 @@ public class Shuttle {
     }
   }*/
 
+  @Override
   public int compareTo(Shuttle shuttle) {
     if (wasFlat && shuttle.wasFlat) {
+      if (!this.crashed && shuttle.isCrashed()) {
+        return -1;
+      }
       return 0;
     } else if (wasFlat) {
-      return 1;
+      //if (Math.abs(this.chromosome.getGene(this.chromosome.getChromo().size()-1).getRotate()) -
+       //   Math.abs(shuttle.getChromosome().getGene(shuttle.getChromosome().getChromo().size()-1).getRotate()) < 0) {
+       //   return 2;
+      //} else {
+        return 1;
+      //}
     } else {
       return -1;
     }
