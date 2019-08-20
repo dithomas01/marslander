@@ -74,6 +74,10 @@ public class Shuttle {
     return this.crashed;
   }
 
+  public Chromosome getChromosome() {
+    return chromosome;
+  }
+
   public String toPolyLine() {
     StringBuilder stringBuilder = new StringBuilder();
     for (int i=0; i<this.x.size(); i++) {

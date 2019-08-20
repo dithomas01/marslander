@@ -2,6 +2,7 @@ package de.dthomas.marslander.ga;
 
 import de.dthomas.marslander.shuttle.Shuttle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Darwin {
@@ -12,6 +13,11 @@ public class Darwin {
   private int rndNumber;
 
   public Population populateNew() {
+    List <Chromosome> list = new ArrayList<>();
+    for (int i = 0; i < size; i++) {
+      list.add(oldShuttles.get(i).getChromosome());
+    }
+    newPopu.setPopu(list);
     return newPopu;
   }
 
