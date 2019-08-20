@@ -95,6 +95,14 @@ public class Shuttle implements Comparable<Shuttle> {
     return fuel;
   }
 
+  public int getvSpeed() {
+    return vSpeed;
+  }
+
+  public int gethSpeed() {
+    return hSpeed;
+  }
+
   public String toPolyLine() {
     StringBuilder stringBuilder = new StringBuilder();
     for (int i=0; i<this.x.size(); i++) {
@@ -147,12 +155,23 @@ public class Shuttle implements Comparable<Shuttle> {
       }
       return 0;
     } else if (wasFlat) {
+      int returner = 1;
       if (Math.abs(this.chromosome.getGene(this.chromosome.getChromo().size()-1).getRotate()) -
           Math.abs(shuttle.getChromosome().getGene(shuttle.getChromosome().getChromo().size()-1).getRotate()) < 0) {
-          return 2;
-      } else {
-        return 1;
+          returner++;
       }
+      //TODO:iscrashed
+      /*if (this.vSpeed <= 40) {
+        returner++;
+      } else if (shuttle.getvSpeed() <= 40) {
+        returner--;
+      }
+      if (this.hSpeed <= 20) {
+        returner ++;
+      } else if (shuttle.gethSpeed() <= 20) {
+        returner --;
+      }*/
+      return returner;
     } else {
       return -1;
     }
