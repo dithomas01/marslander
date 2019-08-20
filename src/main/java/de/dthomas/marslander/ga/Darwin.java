@@ -15,7 +15,6 @@ public class Darwin {
   private int rndNumber;
 
   public Population populateNew() {
-    //sortOldShuttles();
     Collections.sort(oldShuttles, Collections.reverseOrder());
     List <Chromosome> list = new ArrayList<>();
     for (int i = 0; i < bestNumber; i++) {
@@ -32,12 +31,12 @@ public class Darwin {
     Chromosome chromosome02;
     for (int i = 0; i < rest; i++) {
       rndChromo = random.nextInt(rndNumber);
-      chromosome01 = oldShuttles.get(rndChromo).getChromosome();
+      chromosome01 = list.get(rndChromo);
       int tmp = random.nextInt(rndNumber);
       while (tmp==rndChromo) {
         tmp = random.nextInt(rndNumber);
       }
-      chromosome02 = oldShuttles.get(tmp).getChromosome();
+      chromosome02 = list.get(tmp);
       rndGene = random.nextInt(11) / 10.0;
       list.add(new Chromosome.Builder().weight(chromosome01, chromosome02,
           list.get(i).getChromo().size(), rndGene).build());

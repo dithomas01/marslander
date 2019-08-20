@@ -48,17 +48,22 @@ public class Shuttle implements Comparable<Shuttle> {
       vSpeed += (int) (0.5*(Math.cos(Math.toRadians(gene.getRotate())) * gene.getPower() - 3.711));
       int newX = lastX + hSpeed;
       int newY = lastY + vSpeed;
-      if(isOverFlatGround(newX)) wasFlat = true;
       x.add(newX);
       y.add(newY);
       int terrainHeight = terrain.getHeight(newX);
-      if (terrainHeight > newY || newX < 0 || newX >= 7000 || newY >= 3000) {
+      if (terrainHeight > newY) {
+        crashed = true;
+        if (isFlat(newX)) wasFlat = true;
+        break;
+      }
+      if (newX < 0 || newX >= 7000 || newY >= 3000) {
         crashed = true;
         break;
       }
       if (terrainHeight == newY && terrain.isFlat(newX) && gene.getRotate() == 0 && vSpeed <= 40 && hSpeed <= 20) {
         System.out.println("Success!!!");
         crashed = false;
+        wasFlat = true;
         break;
       }
       crashed = true;
@@ -126,6 +131,14 @@ public class Shuttle implements Comparable<Shuttle> {
     }
   }*/
 
+  public boolean isFlat(int x) {
+    if (terrain.isFlat(x)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   @Override
   public int compareTo(Shuttle shuttle) {
     if (wasFlat && shuttle.wasFlat) {
@@ -134,12 +147,12 @@ public class Shuttle implements Comparable<Shuttle> {
       }
       return 0;
     } else if (wasFlat) {
-      //if (Math.abs(this.chromosome.getGene(this.chromosome.getChromo().size()-1).getRotate()) -
-       //   Math.abs(shuttle.getChromosome().getGene(shuttle.getChromosome().getChromo().size()-1).getRotate()) < 0) {
-       //   return 2;
-      //} else {
+      if (Math.abs(this.chromosome.getGene(this.chromosome.getChromo().size()-1).getRotate()) -
+          Math.abs(shuttle.getChromosome().getGene(shuttle.getChromosome().getChromo().size()-1).getRotate()) < 0) {
+          return 2;
+      } else {
         return 1;
-      //}
+      }
     } else {
       return -1;
     }
