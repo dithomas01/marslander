@@ -10,9 +10,10 @@ var plotTerrain = function(terrainX, terrainY) {
 
 var plotChromosome = function(polyArray, crashArray) {
     console.log("plotChromosome")
+    console.log(d3.selectAll("#line").remove());
     var g = d3.select("#parentG").insert("g").classed("lineContainer", true);
     for (var i = 0; i < polyArray.length; i++) {
-        var line = g.insert("polyline").attr("points", polyArray[i]);
+        var line = g.insert("polyline").attr("id", "line").attr("points", polyArray[i]);
         if (!crashArray[i]) {
             line.classed("landed", true);
         }

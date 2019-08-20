@@ -46,12 +46,13 @@ public class DarwinController {
   }
 
   @MessageMapping("/simStart")
-  public void darwinize() {
+  public void darwinize() throws Exception {
     Population population = new Population();
     population.init(40, 60);
     List<Shuttle> shuttles = sendData(population);
     darwin = new Darwin.Builder(shuttles).build();
     darwin.populateNew();
+    Thread.sleep(1000);
     shuttles = sendData(darwin.getNewPopu());
   }
 
