@@ -12,21 +12,28 @@
     <title>Marslander Algo</title>
 </head>
 <body>
-<script>connect()</script>
+<script>
+    connect()
+</script>
 <svg id="mars-plot">
     <g id="parentG" transform="translate(490, 210)">
     </g>
 </svg>
 <div id="sel-terrain-loader">
     <form class="form-inline">
-        <select id="terrainId">
+        <select id="sel-terrainId">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
         </select>
         <button id="btn-loadTerrain" class="btn" type="button">Load Terrain</button>
-        <button id="btn-startSim" class="btn" type="button" disabled>Start Simulation</button>
+        <input type="number" id="input-loopNumber" name="loopNumber" min="1" max="30" value="10" diplay="none">
+        <button id="btn-startSim" class="btn" type="button" display="none">Start Simulation</button>
     </form>
+    <div id="div-actualLoop">
+        loop #
+        <p id="actualLoop"></p>
+    </div>
 </div>
 </body>
 </html>

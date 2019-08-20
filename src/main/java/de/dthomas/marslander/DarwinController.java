@@ -46,18 +46,20 @@ public class DarwinController {
   }
 
   @MessageMapping("/simStart")
-  public void darwinize() throws Exception {
+  public void darwinize(String loop) throws Exception {
     Population population = new Population();
     population.init(40, 60);
-    List<Shuttle> shuttles = sendData(population);
-    darwin = new Darwin.Builder(shuttles).build();
-    darwin.populateNew();
-    Thread.sleep(1000);
-    shuttles = sendData(darwin.getNewPopu());
+    List<Shuttle> shuttles = sendData(population, 0);
+    for (int i = 0; i < Integer.valueOf(loop); i++) {
+      darwin = new Darwin.Builder(shuttles).build();
+      darwin.populateNew();
+      Thread.sleep(1000);
+      shuttles = sendData(darwin.getNewPopu(), i+1);
+    }
   }
 
   @SendTo("/plot/sim")
-  public List<Shuttle> sendData(Population population) {
+  public List<Shuttle> sendData(Population population, int loopNumber) {
     String[] lines = new String[population.getPopu().size()];
     Boolean[] crashes = new Boolean[population.getPopu().size()];
     Chromosome chromosome;
@@ -71,7 +73,7 @@ public class DarwinController {
       crashes[i] = shuttle.isCrashed();
       shuttles.add(shuttle);
     }
-    simpMessagingTemplate.convertAndSend("/plot/sim", new ViewData(lines, crashes));
+    simpMessagingTemplate.convertAndSend("/plot/sim", new ViewData(lines, crashes, loopNumber));
     return shuttles;
   }
 }

@@ -25,6 +25,7 @@ function connect() {
         stompClient.subscribe('/plot/sim', function (viewData) {
             console.log("sim");
             var data = JSON.parse(viewData.body);
+            d3.select("#actualLoop").html(data.loopNumber)
             plotChromosome(data.lines, data.crashes);
         });
     });
@@ -39,11 +40,11 @@ function disconnect() {
 }
 
 function sendTerrain() {
-    stompClient.send("/app/terrain", {}, $("#terrainId").val());
+    stompClient.send("/app/terrain", {}, $("#sel-terrainId").val());
 }
 
 function sendSimStart() {
-    stompClient.send("/app/simStart");
+    stompClient.send("/app/simStart", {}, $("#input-loopNumber").val());
 }
 
 $(function () {

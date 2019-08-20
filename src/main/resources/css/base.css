@@ -24,6 +24,35 @@ polyline {
     stroke-width: 5px;
 }
 
+.form-inline {
+    display: inherit;
+}
+
 .landed {
     stroke: rgb(0, 255, 0);
+}
+
+#sel-terrain-loader {
+    display: flex;
+}
+
+#div-actualLoop {
+    display: flex;
+}
+
+#div-actualLoop {
+    margin: 6px 0 0 3px;
+    display: none;
+}
+
+#actualLoop {
+    margin: 0;
+}
+
+#input-loopNumber {
+    display: none;
+}
+
+#btn-startSim {
+    display: none;
 }
