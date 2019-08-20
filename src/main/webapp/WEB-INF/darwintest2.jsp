@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello WebSocket</title>
     <link rel="stylesheet" href="../css/base.css">
     <script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
     <script src="/webjars/sockjs-client/1.0.2/sockjs.min.js"></script>

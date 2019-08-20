@@ -23,6 +23,7 @@ function connect() {
             plotTerrain(data.terrainX, data.terrainY);
         });
         stompClient.subscribe('/plot/sim', function (viewData) {
+            console.log("sim");
             var data = JSON.parse(viewData.body);
             plotChromosome(data.lines, data.crashes);
         });
