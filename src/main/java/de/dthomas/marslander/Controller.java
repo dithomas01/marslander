@@ -23,7 +23,7 @@ public class Controller {
   int[] y = new int[] {100, 500, 1500, 1000, 150, 150, 800};
   int z = 5;
 
-  @RequestMapping(value = "/", method = RequestMethod.GET)
+  @RequestMapping(value = "/blub", method = RequestMethod.GET)
   public String home(Model model) {
     List<Integer> terrainX;
     List<Integer> terrainY;

@@ -22,7 +22,7 @@ public class DarwinController {
   private TestCase testCase;
   private Darwin darwin;
 
-  @RequestMapping("/bla")
+  @RequestMapping("/")
   public String bla(Model model) {
     List<Integer> terrainX;
     List<Integer> terrainY;

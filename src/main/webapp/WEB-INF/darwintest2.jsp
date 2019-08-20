@@ -10,16 +10,7 @@
     <script src="/webjars/d3js/5.9.7/d3.min.js"></script>
     <script src="../js/app.js"></script>
     <script src="/js/plotChromosome.js"></script>
-    <script>
-        function loadTerrain() {
-            var crashArray = [];
-            var polyArray = [];
-            <c:forEach varStatus="state" items="${lines}" var="item">
-            polyArray.push("${lines[state.index]}");
-            crashArray.push(${isCrashed[state.index]});
-            </c:forEach>
-        }
-    </script>
+    <title>Marslander Algo</title>
 </head>
 <body>
 <script>connect()</script>
