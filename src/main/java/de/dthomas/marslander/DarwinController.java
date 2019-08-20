@@ -3,6 +3,7 @@ package de.dthomas.marslander;
 import de.dthomas.marslander.ga.Chromosome;
 import de.dthomas.marslander.ga.Darwin;
 import de.dthomas.marslander.ga.Population;
+import de.dthomas.marslander.model.TerrainData;
 import de.dthomas.marslander.model.TestCase;
 import de.dthomas.marslander.model.ViewData;
 import de.dthomas.marslander.shuttle.Shuttle;
@@ -39,10 +40,22 @@ public class DarwinController {
     return "darwintest2";
   }
 
-  @MessageMapping("/newData")
-  @SendTo("/topic/greetings")
-  public ViewData greeting(String terrain) throws Exception {
-    int terrainId = Integer.valueOf(terrain);
+  @MessageMapping("/terrain")
+  @SendTo("/plot/terrain")
+  public TerrainData plotTerrain(String terrain) {
+    TestCaseLoader testCaseLoader = new TestCaseLoader(Integer.valueOf(terrain));
+    try {
+      testCase = testCaseLoader.loadTestCase();
+    } catch(IOException ex) {
+      System.err.println(ex);
+    }
+    return new TerrainData(testCase.getTerrain().getXasList(),
+        testCase.getTerrain().getYasList());
+  }
+
+  @MessageMapping("/simStart")
+  @SendTo("/plot/sim")
+  public ViewData greeting(){
     Population population = new Population();
     population.init(40, 60);
     String[] lines = new String[population.getPopu().size()];

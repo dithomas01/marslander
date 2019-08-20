@@ -58,40 +58,4 @@ public class Controller {
     model.addAttribute("isCrashed", crashes);
     return "index";
   }
-
-  @RequestMapping("/bla2")
-  public String bla2(Model model) {
-    List<Integer> terrainX;
-    List<Integer> terrainY;
-    TestCaseLoader testCaseLoader = new TestCaseLoader(0);
-    TestCase testCase;
-    try {
-      testCase = testCaseLoader.loadTestCase();
-    } catch(IOException ex) {
-      System.err.println(ex);
-      return "error";
-    }
-    terrainX = testCase.getTerrain().getXasList();
-    terrainY = testCase.getTerrain().getYasList();
-    Population population = new Population();
-    population.init(40, 60);
-    String[] lines = new String[population.getPopu().size()];
-    Boolean[] crashes = new Boolean[population.getPopu().size()];
-    Chromosome chromosome;
-    List<Shuttle> shuttles = new ArrayList<>();
-    for (int i = 0; i < population.getPopu().size(); i++) {
-      chromosome = population.getChromosome(i);
-      Shuttle shuttle = new Shuttle(chromosome, testCase.getTerrain(), testCase.getFuel(), testCase.getX(),
-          testCase.getY(), testCase.gethSpeed(), testCase.getvSpeed());
-      shuttle.computePath();
-      lines[i] = shuttle.toPolyLine();
-      crashes[i] = shuttle.isCrashed();
-      shuttles.add(shuttle);
-    }
-    model.addAttribute("terrainX", terrainX);
-    model.addAttribute("terrainY", terrainY);
-    model.addAttribute("lines", lines);
-    model.addAttribute("isCrashed", crashes);
-    return "darwintest2";
-  }
 }

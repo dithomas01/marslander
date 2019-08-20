@@ -25,23 +25,17 @@
 <script>connect()</script>
 <svg id="mars-plot">
     <g id="parentG" transform="translate(490, 210)">
-        <line x1="0" y1="0" x2="${terrainX[0]}" y2="${terrainY[0]}"/>
-        <c:forEach varStatus="state" items="${terrainX}" var="item">
-            <c:if test="${not state.first}">
-                <line x1="${terrainX[state.index - 1]}" y1="${terrainY[state.index - 1]}"
-                      x2="${terrainX[state.index]}" y2="${terrainY[state.index]}"/>
-            </c:if>
-        </c:forEach>
     </g>
 </svg>
 <div id="terrain-loader">
-    <form class=form-inline">
+    <form class="form-inline">
         <select id="terrainId">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
         </select>
         <button id="loadTerrain" class="btn" type="button">Load Terrain</button>
+        <button id="startSim" class="btn" type="button">Start Simulation</button>
     </form>
 </div>
 </body>
