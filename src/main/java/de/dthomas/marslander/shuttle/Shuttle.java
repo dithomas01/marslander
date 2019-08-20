@@ -16,6 +16,7 @@ public class Shuttle {
   private int hSpeed;
   private int vSpeed;
   private boolean crashed;
+  private boolean wasFlat;
 
   public Shuttle(Chromosome chromosome, Terrain terrain, int fuel, int startX, int startY, int hSpeed, int vSpeed) {
     this.chromosome = chromosome;
@@ -28,6 +29,7 @@ public class Shuttle {
     this.crashed = false;
     this.hSpeed = hSpeed;
     this.vSpeed = vSpeed;
+    wasFlat = false;
   }
 
   public void computePath() {
@@ -46,6 +48,7 @@ public class Shuttle {
       vSpeed += (int) (0.5*(Math.cos(Math.toRadians(gene.getRotate())) * gene.getPower() - 3.711));
       int newX = lastX + hSpeed;
       int newY = lastY + vSpeed;
+      if(isOverFlatGround(newX)) wasFlat = true;
       x.add(newX);
       y.add(newY);
       int terrainHeight = terrain.getHeight(newX);
@@ -60,6 +63,10 @@ public class Shuttle {
       crashed = true;
     }
 
+  }
+
+  public boolean isOverFlatGround(int x) {
+    return terrain.isFlat(x);
   }
 
   public List<Integer> getX() {
@@ -78,6 +85,10 @@ public class Shuttle {
     return chromosome;
   }
 
+  public int getFuel() {
+    return fuel;
+  }
+
   public String toPolyLine() {
     StringBuilder stringBuilder = new StringBuilder();
     for (int i=0; i<this.x.size(); i++) {
@@ -85,5 +96,42 @@ public class Shuttle {
       if (i+1 < x.size()) stringBuilder.append(" ");
     }
     return stringBuilder.toString();
+  }
+
+  @Override
+  public String toString() {
+    return "Shuttle for chromosome: " + chromosome.hashCode() + ": fuel = " + fuel + ", hSpeed = "
+        + hSpeed + ", vSpeed = " + vSpeed + ", crashed = " + crashed + ", wasFlat = " + wasFlat;
+  }
+
+  /*public int compareTo(Shuttle shuttle) {
+    if (!shuttle.isCrashed() && !shuttle.isCrashed()) {
+      if (this.fuel > shuttle.getFuel()) {
+        return 1;
+      } else if (this.fuel == shuttle.getFuel()) {
+        return 0;
+      } else {
+        return -1;
+      }
+    } else if (!this.crashed && shuttle.isCrashed()) {
+      return 1;
+    } else if (this.crashed && !shuttle.isCrashed()) {
+      return -1;
+    } else {
+      if (wasFlat) {
+        return 1;
+      }
+      return 0;
+    }
+  }*/
+
+  public int compareTo(Shuttle shuttle) {
+    if (wasFlat && shuttle.wasFlat) {
+      return 0;
+    } else if (wasFlat) {
+      return 1;
+    } else {
+      return -1;
+    }
   }
 }

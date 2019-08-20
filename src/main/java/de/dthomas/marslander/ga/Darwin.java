@@ -4,6 +4,7 @@ import de.dthomas.marslander.shuttle.Shuttle;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Darwin {
   private List<Shuttle> oldShuttles;
@@ -13,9 +14,14 @@ public class Darwin {
   private int rndNumber;
 
   public Population populateNew() {
+    sortOldShuttles();
     List <Chromosome> list = new ArrayList<>();
-    for (int i = 0; i < size; i++) {
-      list.add(oldShuttles.get(i).getChromosome());
+    for (int i = 0; i < bestNumber; i++) {
+      list.add(oldShuttles.remove(i).getChromosome());
+    }
+    Random random = new Random();
+    for (int i=bestNumber; i<rndNumber; i++) {
+      list.add(oldShuttles.remove(random.nextInt(oldShuttles.size())).getChromosome());
     }
     newPopu.setPopu(list);
     return newPopu;
@@ -39,6 +45,12 @@ public class Darwin {
     this.size = oldShuttles.size();
     this.bestNumber = Math.round((float) size*3/10);
     this.rndNumber = Math.round((float) size*1/5) + this.bestNumber;
+  }
+
+  private void sortOldShuttles() {
+    oldShuttles.sort((Shuttle shuttle1, Shuttle shuttle2) -> {
+      return shuttle2.compareTo(shuttle1);
+    });
   }
 
   public Population getNewPopu() {

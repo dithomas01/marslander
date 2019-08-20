@@ -47,4 +47,9 @@ public class Chromosome {
   public void setChromo(List<Gene> chromo) {
     this.chromo = chromo;
   }
+
+  @Override
+  public String toString() {
+    return "In this chromosome are " + chromo.size() + " genes.";
+  }
 }
